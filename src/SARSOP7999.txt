@@ -1,0 +1,29 @@
+
+Loading the model ...
+  input file   : /media/martin/UUI/Backup mosquito file/Mosquito7.pomdpx
+  loading time : 121.91s 
+
+SARSOP initializing ...
+  initialization time : 291.59s
+
+-------------------------------------------------------------------------------
+ Time   |#Trial |#Backup |LBound    |UBound    |Precision  |#Alphas |#Beliefs  
+-------------------------------------------------------------------------------
+ 291.59  0       0        17.482     28.9329    11.451      29041    1        
+ 304.36  0       50       17.6564    28.9171    11.2607     262      51       
+-------------------------------------------------------------------------------
+
+SARSOP finishing ...
+  Preset timeout reached
+  Timeout     : 300.000000s
+  Actual Time : 304.360000s
+
+-------------------------------------------------------------------------------
+ Time   |#Trial |#Backup |LBound    |UBound    |Precision  |#Alphas |#Beliefs  
+-------------------------------------------------------------------------------
+ 304.36  0       50       17.6564    28.9171    11.2607     257      51       
+-------------------------------------------------------------------------------
+
+Writing out policy ...
+  output file : out.policy
+

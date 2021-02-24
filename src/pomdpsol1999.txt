@@ -1,0 +1,45 @@
+
+Loading the model ...
+  input file   : Mosquito1.pomdpx
+InitialX is 3
+  loading time : 0.00s 
+
+SARSOP initializing...
+best action for state 0 : 0
+best action for state 1 : 2
+best action for state 2 : 0
+best action for state 3 : 2
+best action for state 4 : 2
+  initialization time : 0.10s
+ 0.1     0       0        133.772    133.773    0.000511828 45       1        
+
+-------------------------------------------------------------------------------
+ Time   |#Trial |#Backup |LBound    |UBound    |Precision  |#Alphas |#Beliefs  
+-------------------------------------------------------------------------------
+ 0.1     0       1        133.772    133.773    0.000511828 46       2        
+-------------------------------------------------------------------------------
+
+SARSOP finishing ...
+  target precision reached
+  target precision  : 0.001000
+  precision reached : 0.000512 
+
+
+
+Model 0, proba: 0.166667
+Model 1, proba: 0.166667
+Model 2, proba: 0.166667
+Model 3, proba: 0.166667
+Model 4, proba: 0.166667
+Model 5, proba: 0.166667
+802.635   802.638
+
+-------------------------------------------------------------------------------
+ Time   |#Trial |#Backup |LBound    |UBound    |Precision  |#Alphas |#Beliefs  
+-------------------------------------------------------------------------------
+ 0.1     0       1        133.772    133.773    0.000511828 5        2        
+-------------------------------------------------------------------------------
+
+Writing out policy ...
+  output file : out.policy
+

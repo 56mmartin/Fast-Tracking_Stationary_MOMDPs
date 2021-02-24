@@ -1,0 +1,200 @@
+
+Loading the model ...
+  input file   : Mosquito6.pomdpx
+InitialX is 127
+  loading time : 21.36s 
+
+SARSOP initializing...
+best action for state 0 : 0
+best action for state 1 : 2
+best action for state 2 : 6
+best action for state 3 : 5
+best action for state 4 : 14
+best action for state 5 : 10
+best action for state 6 : 13
+best action for state 7 : 12
+best action for state 8 : 27
+best action for state 9 : 2
+best action for state 10 : 29
+best action for state 11 : 5
+best action for state 12 : 30
+best action for state 13 : 10
+best action for state 14 : 13
+best action for state 15 : 12
+best action for state 16 : 46
+best action for state 17 : 33
+best action for state 18 : 48
+best action for state 19 : 5
+best action for state 20 : 49
+best action for state 21 : 10
+best action for state 22 : 39
+best action for state 23 : 12
+best action for state 24 : 45
+best action for state 25 : 33
+best action for state 26 : 29
+best action for state 27 : 5
+best action for state 28 : 49
+best action for state 29 : 10
+best action for state 30 : 39
+best action for state 31 : 12
+best action for state 32 : 72
+best action for state 33 : 53
+best action for state 34 : 56
+best action for state 35 : 55
+best action for state 36 : 60
+best action for state 37 : 58
+best action for state 38 : 59
+best action for state 39 : 12
+best action for state 40 : 65
+best action for state 41 : 53
+best action for state 42 : 56
+best action for state 43 : 55
+best action for state 44 : 60
+best action for state 45 : 58
+best action for state 46 : 59
+best action for state 47 : 12
+best action for state 48 : 71
+best action for state 49 : 53
+best action for state 50 : 68
+best action for state 51 : 55
+best action for state 52 : 69
+best action for state 53 : 58
+best action for state 54 : 59
+best action for state 55 : 12
+best action for state 56 : 65
+best action for state 57 : 53
+best action for state 58 : 68
+best action for state 59 : 55
+best action for state 60 : 69
+best action for state 61 : 58
+best action for state 62 : 59
+best action for state 63 : 12
+best action for state 64 : 0
+best action for state 65 : 2
+best action for state 66 : 6
+best action for state 67 : 5
+best action for state 68 : 14
+best action for state 69 : 10
+best action for state 70 : 13
+best action for state 71 : 12
+best action for state 72 : 27
+best action for state 73 : 19
+best action for state 74 : 29
+best action for state 75 : 21
+best action for state 76 : 30
+best action for state 77 : 24
+best action for state 78 : 25
+best action for state 79 : 12
+best action for state 80 : 46
+best action for state 81 : 33
+best action for state 82 : 48
+best action for state 83 : 35
+best action for state 84 : 49
+best action for state 85 : 38
+best action for state 86 : 39
+best action for state 87 : 12
+best action for state 88 : 45
+best action for state 89 : 42
+best action for state 90 : 43
+best action for state 91 : 35
+best action for state 92 : 44
+best action for state 93 : 38
+best action for state 94 : 39
+best action for state 95 : 12
+best action for state 96 : 72
+best action for state 97 : 53
+best action for state 98 : 56
+best action for state 99 : 55
+best action for state 100 : 60
+best action for state 101 : 58
+best action for state 102 : 59
+best action for state 103 : 12
+best action for state 104 : 65
+best action for state 105 : 62
+best action for state 106 : 63
+best action for state 107 : 55
+best action for state 108 : 64
+best action for state 109 : 58
+best action for state 110 : 59
+best action for state 111 : 12
+best action for state 112 : 71
+best action for state 113 : 67
+best action for state 114 : 68
+best action for state 115 : 55
+best action for state 116 : 69
+best action for state 117 : 58
+best action for state 118 : 59
+best action for state 119 : 12
+best action for state 120 : 70
+best action for state 121 : 67
+best action for state 122 : 68
+best action for state 123 : 55
+best action for state 124 : 69
+best action for state 125 : 58
+best action for state 126 : 59
+best action for state 127 : 12
+best action for state 128 : 77
+  initialization time : 66.45s
+ 66.45   0       0        31.5917    32.2697    0.677919    10836    1        
+
+-------------------------------------------------------------------------------
+ Time   |#Trial |#Backup |LBound    |UBound    |Precision  |#Alphas |#Beliefs  
+-------------------------------------------------------------------------------
+ 71.36   0       50       31.6033    32.2501    0.646816    819      51       
+ 79.76   0       100      31.6033    32.2501    0.646816    853      101      
+ 97.85   0       150      31.6033    32.2501    0.646816    859      151      
+ 120.33  0       200      31.6033    32.2501    0.646816    843      201      
+ 142.39  0       250      31.6033    32.2501    0.646816    849      251      
+ 159.8   0       300      31.6033    32.2501    0.646816    855      301      
+ 171.61  0       350      31.6033    32.2501    0.646816    861      351      
+ 181.18  0       400      31.6033    32.2501    0.646816    845      397      
+ 181.24  0       450      31.6033    32.2501    0.646816    851      397      
+ 181.3   0       500      31.6033    32.2501    0.646816    857      397      
+ 181.36  0       550      31.6033    32.2501    0.646816    852      397      
+ 181.42  0       600      31.6033    32.2501    0.646816    847      397      
+ 181.48  0       650      31.6033    32.2501    0.646816    853      397      
+ 183.63  0       700      31.6033    32.2501    0.646816    881      433      
+ 186.15  1       1463     31.6387    32.2174    0.578693    1082     464      
+ 186.15  1       1464     31.6387    32.2174    0.578693    1083     464      
+ 186.16  1       1465     31.6387    32.2174    0.578693    1084     464      
+ 186.16  1       1466     31.6387    32.2174    0.578693    1085     464      
+ 186.16  1       1467     31.6387    32.2174    0.578693    1086     464      
+ 186.16  1       1468     31.6387    32.2174    0.578693    1087     464      
+ 186.16  1       1469     31.6387    32.2174    0.578693    1088     464      
+ 186.17  1       1470     31.6387    32.2174    0.578693    1089     464      
+ 186.17  1       1471     31.6387    32.2174    0.578693    1090     464      
+ 186.17  1       1472     31.6387    32.2174    0.578693    1091     464      
+ 186.17  1       1473     31.6387    32.2174    0.578693    1092     464      
+ 186.17  1       1474     31.6387    32.2174    0.578693    1093     464      
+ 186.18  1       1475     31.6387    32.2174    0.578693    1094     464      
+ 186.18  1       1476     31.6387    32.2174    0.578693    1095     464      
+ 186.18  1       1477     31.6387    32.2174    0.578693    1096     464      
+ 195.69  1       1500     31.6387    32.2174    0.578693    1100     487      
+ 243.31  1       1550     31.6387    32.2174    0.578693    1117     537      
+ 300.59  1       1600     31.6387    32.2174    0.578693    1124     587      
+-------------------------------------------------------------------------------
+
+SARSOP finishing ...
+  Preset timeout reached
+  Timeout     : 300.000000s
+  Actual Time : 300.590000s
+
+
+
+Model 0, proba: 0.166667
+Model 1, proba: 0.166667
+Model 2, proba: 0.166667
+Model 3, proba: 0.166667
+Model 4, proba: 0.166667
+Model 5, proba: 0.166667
+189.832   193.305
+
+-------------------------------------------------------------------------------
+ Time   |#Trial |#Backup |LBound    |UBound    |Precision  |#Alphas |#Beliefs  
+-------------------------------------------------------------------------------
+ 300.59  1       1600     31.6387    32.2174    0.578693    1110     587      
+-------------------------------------------------------------------------------
+
+Writing out policy ...
+  output file : out.policy
+

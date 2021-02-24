@@ -1,5 +1,5 @@
-/** 
-* The code is released under GPL v2 
+/**
+* The code is released under GPL v2
 */
 #ifndef GLOBALRESOURCE_H
 #define GLOBALRESOURCE_H
@@ -50,7 +50,7 @@ namespace momdp
 
 		~GlobalResource();
 
-		// Simulation, Evaluation Related 
+		// Simulation, Evaluation Related
 		bool simLookahead;
 		int simLen;
 		int simNum;
@@ -116,7 +116,7 @@ namespace momdp
 		// singleton pattern
 
 		static GlobalResource* singleInstance;
-		static GlobalResource* getInstance()
+		static GlobalResource* getInstance()  //ensure that there is only one element in the class.
 		{
 			if( singleInstance == NULL)
 			{
@@ -156,7 +156,7 @@ namespace momdp
 			logLevel = level;
 		}
 
-		// used to log some custom info 
+		// used to log some custom info
 		void logEntry(string log)
 		{
 			if(!logFile.is_open())
@@ -265,9 +265,9 @@ namespace momdp
 				stop = true;
 			}
 
-			
+
 			if ((ub-lb) < pbSolver->solverParams->targetPrecision)
-			{      
+			{
 				printf("Target precision reached: %f (%f)\n\n", ub-lb, pbSolver->solverParams->targetPrecision);
 				stop = true;
 			}

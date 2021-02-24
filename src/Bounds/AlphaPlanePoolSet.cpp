@@ -24,7 +24,7 @@ SharedPointer<AlphaPlane> AlphaPlanePoolSet::getValueAlpha(SharedPointer<BeliefW
 
 SharedPointer<AlphaPlane> AlphaPlanePoolSet::backup(BeliefTreeNode * node)
 {
-	SharedPointer<AlphaPlane> result = backupEngine->backup(node);
+	SharedPointer<AlphaPlane> result = backupEngine->backup(node);   // function in BackupAlphaPlaneMOMDP
 	for(int i = 0 ; i < onBackup.size(); i++)
 	{
 		(*onBackup[i])(solver, node, result);
@@ -61,20 +61,20 @@ SharedPointer<AlphaPlane> AlphaPlanePoolSet::getBestAlphaPlane1(BeliefWithState&
 }
 
 //write out policy in new xml format
-void AlphaPlanePoolSet::writeToFile(const std::string& outFileName, string problemName) 
+void AlphaPlanePoolSet::writeToFile(const std::string& outFileName, string problemName)
 {
 	ofstream out(outFileName.c_str());
-	if (!out) 
+	if (!out)
 	{
 		cerr << "ERROR: Bounds::writeToFile: couldn't open " << outFileName << " for writing " << endl;
 		exit(EXIT_FAILURE);
 	}
-	
-	string declaration = 
+
+	string declaration =
 	"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n<Policy version=\"0.1\" type=\"value\" model=\""+ problemName +"\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"policyx.xsd\">";
 	out << declaration << endl ;
 	int totalnumPlanes = 0;
-	FOR (sval, set.size()) 
+	FOR (sval, set.size())
 	{
 		totalnumPlanes += set[sval]->planes.size();
 	}
@@ -84,11 +84,11 @@ void AlphaPlanePoolSet::writeToFile(const std::string& outFileName, string probl
 	FOR (sval, set.size())
 	{
 		list<SharedPointer<AlphaPlane> >::const_iterator pi = set[sval]->planes.begin();
-		FOR (i, set[sval]->planes.size()) 
+		FOR (i, set[sval]->planes.size())
 		{
 			(*pi)->write(out);
 			pi++;
-			    
+
 		}
 	}
 	out << "</AlphaVector> </Policy>" << endl;
@@ -96,10 +96,10 @@ void AlphaPlanePoolSet::writeToFile(const std::string& outFileName, string probl
 
 //write out policy in old format
 /*
-void AlphaPlanePoolSet::writeToFile(const std::string& outFileName) 
+void AlphaPlanePoolSet::writeToFile(const std::string& outFileName)
 {
 	ofstream out(outFileName.c_str());
-	if (!out) 
+	if (!out)
 	{
 		cerr << "ERROR: Bounds::writeToFile: couldn't open " << outFileName << " for writing " << endl;
 		exit(EXIT_FAILURE);
@@ -134,7 +134,7 @@ void AlphaPlanePoolSet::writeToFile(const std::string& outFileName)
 	out << "  policyType => \"MaxPlanesLowerBoundWithObservedState\"," << endl;
 
 	int totalnumPlanes = 0;
-	FOR (sval, set.size()) 
+	FOR (sval, set.size())
 	{
 		totalnumPlanes += set[sval]->planes.size();
 	}
@@ -145,7 +145,7 @@ void AlphaPlanePoolSet::writeToFile(const std::string& outFileName)
 	FOR (sval, set.size()-1)
 	{
 		list<SharedPointer<AlphaPlane> >::const_iterator pi = set[sval]->planes.begin();
-		FOR (i, set[sval]->planes.size()) 
+		FOR (i, set[sval]->planes.size())
 		{
 			(*pi)->write(out);
 			out << "," << endl;
@@ -155,7 +155,7 @@ void AlphaPlanePoolSet::writeToFile(const std::string& outFileName)
 
 	list<SharedPointer<AlphaPlane> >::const_iterator pi = set.back()->planes.begin();
 
-	FOR (i, set.back()->planes.size()-1) 
+	FOR (i, set.back()->planes.size()-1)
 	{
 		(*pi)->write(out);
 		out << "," << endl;

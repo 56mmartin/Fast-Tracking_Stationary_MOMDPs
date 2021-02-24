@@ -14,7 +14,7 @@ namespace momdp
 	void copy(DenseVector& result, const SparseVector& x)
 	{
 		result.resize( x.size() );
-		FOREACH(SparseVector_Entry, xi,  x.data) 
+		FOREACH(SparseVector_Entry, xi,  x.data)
 		{
 			result.data[xi->index] = xi->value;
 		}
@@ -252,7 +252,7 @@ namespace momdp
 		assert( A.size1() == x.size() );
 		assert( 0 <= c && c < A.size2() );
 		result.resize( x.size() );
-                SparseCol col = A.col(c);
+        SparseCol col = A.col(c);
 		emult_dc_internal( result, x, col.begin(), col.end());
 	}
 
@@ -261,7 +261,7 @@ namespace momdp
 	{
 		assert( x.size() == y.size() );
 		double sum = 0.0;
-		FOREACH(SparseVector_Entry, yi,  y.data) 
+		FOREACH(SparseVector_Entry, yi,  y.data)
 		{
 			sum += x(yi->index) * yi->value;
 		}
@@ -552,7 +552,7 @@ main_loop_done:
 	}
 
 	// Index of maximum element of a vector
-	int argmax_elt(const DenseVector& v) 
+	int argmax_elt(const DenseVector& v)
 	{
 		assert(v.size() > 0);
 		double maxval = v(0);
@@ -566,36 +566,36 @@ main_loop_done:
 		return max_ind;
 	}
 
-	int argmax_elt(const SparseVector& v) 
+	int argmax_elt(const SparseVector& v)
 	{
 		assert(v.size() > 0);
 		double maxval = v(0);
 		int max_ind = 0;
 		// find the largest non-zero entry
-		FOR_CV(v) 
+		FOR_CV(v)
 		{
 			double val = CV_VAL(v);
-			if (val > maxval) 
+			if (val > maxval)
 			{
 
 				max_ind = CV_INDEX(v);
 				maxval = val;
 			}
 		}
-		if (maxval >= 0 || v.filled() == v.size()) 
+		if (maxval >= 0 || v.filled() == v.size())
 		{
 			// a non-zero entry is maximal
 			return max_ind;
 		}
-		else 
+		else
 		{
 			// all non-zero entries are negative; return
 			// the index of a zero entry.
 			int ind, last_ind = -1;
-			FOR_CV(v) 
+			FOR_CV(v)
 			{
 				ind = CV_INDEX(v);
-				if (ind - last_ind > 1) 
+				if (ind - last_ind > 1)
 				{
 					return ind-1;
 				}

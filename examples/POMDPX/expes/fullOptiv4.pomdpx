@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pomdpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1" id="esport" xsi:noNamespaceSchemaLocation="pomdpx.xsd">
+  <Discount>0.9</Discount>
+  <Variable>
+    <StateVar vnamePrev="ap" vnameCurr="nap" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="cp" vnameCurr="ncp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="dp" vnameCurr="ndp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="ep" vnameCurr="nep" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="fp" vnameCurr="nfp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="gp" vnameCurr="ngp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="h2" vnameCurr="nh2" fullyObs="false">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="g2" vnameCurr="ng2" fullyObs="false">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="f2" vnameCurr="nf2" fullyObs="false">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="_r2" vnameCurr="_nr2" fullyObs="false">
+      <ValueEnum>alt1 alt2</ValueEnum>
+    </StateVar>
+    <ActionVar vname="action">
+      <ValueEnum>adda addc adde addd</ValueEnum>
+    </ActionVar>
+    <RewardVar vname="reward"/>
+  </Variable>
+  <InitialStateBelief>
+    <CondProb>
+      <Var>ap</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>cp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>dp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ep</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>fp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>gp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>h2</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>uniform</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>g2</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>uniform</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>f2</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>uniform</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>_r2</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>0.8 0.2</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+  </InitialStateBelief>
+  <StateTransitionFunction>
+    <CondProb>
+      <Var>_nr2</Var>
+      <Parent>action</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* -</Instance>
+          <ProbTable>0.8 0.2</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nh2</Var>
+      <Parent>action h2</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ng2</Var>
+      <Parent>action g2</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nf2</Var>
+      <Parent>action f2</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nap</Var>
+      <Parent>action ap</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>adda * -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ncp</Var>
+      <Parent>action cp fp</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>addc * s1 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nep</Var>
+      <Parent>action ep gp</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>adde * s1 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ndp</Var>
+      <Parent>action dp gp</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>addd * s1 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ngp</Var>
+      <Parent>action gp g2 cp ap f2 fp _r2</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0-->
+          <Instance>adda - * * * * * * -</Instance>
+          <ProbTable>1.0 0.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1-->
+          <Instance>adda - s1 * * s1 * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0-->
+          <Instance>adda - s1 s1 * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1-->
+          <Instance>adda - s1 s1 * s1 * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1-->
+          <Instance>adda - s1 s1 * s1 * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0-->
+          <Instance>addc - * * * * s1 * -</Instance>
+          <ProbTable>1.0 0.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1-->
+          <Instance>addc - s1 * s1 s1 s1 alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0-->
+          <Instance>addc - s1 * * * s1 * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1-->
+          <Instance>addc - s1 * s1 s1 s1 alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1-->
+          <Instance>addc - s1 * s1 s1 s1 alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0-->
+          <Instance>adde s1 * * * * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1-->
+          <Instance>adde s1 s1 * s1 s1 * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0-->
+          <Instance>adde s1 s1 s1 * * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1-->
+          <Instance>adde s1 s1 s1 s1 s1 * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1-->
+          <Instance>adde s1 s1 s1 s1 s1 * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0-->
+          <Instance>addd s1 * * * * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1-->
+          <Instance>addd s1 s1 * s1 s1 * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0-->
+          <Instance>addd s1 s1 s1 * * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1-->
+          <Instance>addd s1 s1 s1 s1 s1 * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1-->
+          <Instance>addd s1 s1 s1 s1 s1 * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nfp</Var>
+      <Parent>action fp g2 cp ap f2 gp _r2</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0-->
+          <Instance>adda - * * * * * * -</Instance>
+          <ProbTable>1.0 0.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1-->
+          <Instance>adda - s1 * * s1 * alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1-->
+          <Instance>adda - s1 s1 * s1 * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0-->
+          <Instance>addc s1 * * * * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1-->
+          <Instance>addc s1 s1 * s1 s1 * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1-->
+          <Instance>addc s1 s1 * s1 s1 * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0-->
+          <Instance>adde - * * * * s1 * -</Instance>
+          <ProbTable>1.0 0.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1-->
+          <Instance>adde - s1 * s1 s1 s1 alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1-->
+          <Instance>adde - s1 s1 s1 s1 s1 alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0-->
+          <Instance>addd - * * * * s1 * -</Instance>
+          <ProbTable>1.0 0.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1-->
+          <Instance>addd - s1 * s1 s1 s1 alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1-->
+          <Instance>addd - s1 s1 s1 s1 s1 alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+  </StateTransitionFunction>
+  <RewardFunction>
+    <Func>
+      <Var>reward</Var>
+      <Parent>nap nfp ngp ncp ndp nep</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* * * * * * </Instance>
+          <ValueTable>-1</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+      </Parameter>
+    </Func>
+  </RewardFunction>
+</pomdpx>

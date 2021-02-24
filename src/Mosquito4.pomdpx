@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <pomdpx version="1.0" id="mosquito"><Description>Mosquito project</Description>
-<Discount>0.950000</Discount>
+<Discount>0.9990000</Discount>
 <Variable>
     <StateVar vnamePrev="island_0" vnameCurr="island_1" fullyObs="true">
         <NumValues>33</NumValues>

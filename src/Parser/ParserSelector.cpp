@@ -22,12 +22,12 @@ SharedPointer<MOMDP> ParserSelector::loadProblem(string problemName, SolverParam
 	myfile.open(problemName.c_str());
 	string line;
 	bool xmlfile = false;
-	if (myfile.is_open()) 
+	if (myfile.is_open())
 	{
 		getline(myfile, line);
 
 		string first4chars = line.substr(0, 5);
-		if (first4chars == "<?xml") 
+		if (first4chars == "<?xml")
 		{
 			xmlfile = true;
 		}
@@ -40,12 +40,12 @@ SharedPointer<MOMDP> ParserSelector::loadProblem(string problemName, SolverParam
 	myfile.close();
 
 	//FactoredPomdp test;
-	if (xmlfile) 
+	if (xmlfile)
 	{
 		FactoredPomdp* factoredP = new FactoredPomdp(problemName);
 		unsigned int probType = factoredP->start(); // read in the file
 		bool flag_copyOldPOMDP = false;
-		switch (probType) 
+		switch (probType)
 		{
 			// MOMDP Lite
 		case MIXED :
@@ -90,9 +90,9 @@ SharedPointer<MOMDP> ParserSelector::loadProblem(string problemName, SolverParam
 		problem = MOMDP::convertMOMDPFromPOMDPX(factoredP, flag_copyOldPOMDP, probType);
 
 		delete factoredP;
-	} 
-	else 
-	{ 
+	}
+	else
+	{
 		// parse the problem using cassandra's parser and write parameters into the POMDP object (problem)
 		Parser* parser = new Parser();
 		POMDP* pomdpProblem = parser->parse(problemName, solverParam.useFastParser);

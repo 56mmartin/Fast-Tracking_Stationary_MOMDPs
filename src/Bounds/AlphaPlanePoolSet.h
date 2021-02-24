@@ -15,7 +15,7 @@
 
 using namespace std;
 using namespace momdp;
-namespace momdp 
+namespace momdp
 {
 	class AlphaPlanePoolSet :	public Bound<AlphaPlane>
 	{
@@ -23,7 +23,7 @@ namespace momdp
 	public:
 		vector<AlphaPlanePool*> set;
 		SharedPointer<MOMDP> problem;
-		
+
 		void setProblem(SharedPointer<MOMDP> p)
 		{
 			problem = p;
@@ -51,7 +51,7 @@ namespace momdp
 				set[i]->setDataTable(p[i]);
 			}
 		}
-		
+
 		AlphaPlanePoolSet(Backup<AlphaPlane> *_backupEngine)
 		{
 			this->setBackupEngine(_backupEngine);
@@ -95,11 +95,11 @@ namespace momdp
 		SharedPointer<AlphaPlane> getBestAlphaPlane(BeliefWithState& b);
 		SharedPointer<AlphaPlane> getBestAlphaPlane(BeliefTreeNode& cn);
 		SharedPointer<AlphaPlane> getBestAlphaPlane1(BeliefWithState& beliefandState);
-		
+
 		void writeToFile(const std::string& outFileName, string problemName) ; //write in new XML format
 //		void writeToFile(const std::string& outFileName) ; //write in out IV format
 	};
 }
 
-#endif 
+#endif
 
