@@ -122,7 +122,7 @@ int  MOMDP::getBeliefSize()
     return YStates->size();
 }
 
-SparseVector&  MOMDP::getJointUnobsStateProbVector(SparseVector& result, SharedPointer<BeliefWithState> b, int a, int Xn) 
+SparseVector&  MOMDP::getJointUnobsStateProbVector(SparseVector& result, SharedPointer<BeliefWithState> b, int a, int Xn)
 {
     int Xc = b->sval; // currrent value for observed state variable
     // belief_vector Bc = b.bvec; 	// current belief for unobserved state variable
@@ -146,17 +146,17 @@ SparseVector&  MOMDP::getJointUnobsStateProbVector(SparseVector& result, SharedP
     return result;
 }
 
-//return vector of P(x'|b_x , b_y, a) 
+//return vector of P(x'|b_x , b_y, a)
 obsState_prob_vector& MOMDP::getObsStateProbVector(obsState_prob_vector& result, SharedPointer<belief_vector>& belY, DenseVector& belX, int a)
 {
-    DenseVector Bc; 
+    DenseVector Bc;
     copy(Bc, *belY);
     result.resize(this->XStates->size());
 
     //loop over x
     FOR (xc, this->XStates->size())
     {
-	if (!(belX(xc) == 0)) 
+	if (!(belX(xc) == 0))
 	{
 	    // for a particular x
 	    DenseVector tmp;
@@ -174,16 +174,16 @@ obsState_prob_vector& MOMDP::getObsStateProbVector(obsState_prob_vector& result,
     return result;
 }
 
-void MOMDP::getObsProbVector(obs_prob_vector& result, SharedPointer<belief_vector>& belY, obsState_prob_vector& belX, int a, int Xn) 
+void MOMDP::getObsProbVector(obs_prob_vector& result, SharedPointer<belief_vector>& belY, obsState_prob_vector& belX, int a, int Xn)
 {
-    DenseVector Bc; 
+    DenseVector Bc;
     copy(Bc, *belY);
     result.resize(this->observations->size());
 
     //loop over x
     FOR (Xc, XStates->size())
     {
-	if (!(belX(Xc) == 0)) 
+	if (!(belX(Xc) == 0))
 	{
 	    // for a particular x
 	    SparseVector opv;
@@ -204,7 +204,7 @@ void MOMDP::getObsProbVector(obs_prob_vector& result, SharedPointer<belief_vecto
     result *= (1.0/result.norm_1());
 }
 
-void MOMDP::getObsProbVector(obs_prob_vector& result, const BeliefWithState& b, int a, int Xn) 
+void MOMDP::getObsProbVector(obs_prob_vector& result, const BeliefWithState& b, int a, int Xn)
 {
     int Xc = b.sval; // currrent value for observed state variable
     // belief_vector Bc = b.bvec; 	// current belief for unobserved state variable
@@ -252,7 +252,7 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDP(POMDP* pomdpProblem)
 	result->XStates->add(temp);
     }
 
-    FOR(y, pomdpProblem->getNumStateDimensions()) 
+    FOR(y, pomdpProblem->getNumStateDimensions())
     {
 	stringstream sstream;
 	sstream << "State " << y ;
@@ -262,7 +262,7 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDP(POMDP* pomdpProblem)
     }
 
     // Action
-    FOR(a, pomdpProblem->getNumActions()) 
+    FOR(a, pomdpProblem->getNumActions())
     {
 	stringstream sstream;
 	sstream << "Action " << a ;
@@ -271,7 +271,7 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDP(POMDP* pomdpProblem)
 	result->actions->add(tempAction);
     }
     // Observations
-    FOR(o, pomdpProblem->getNumObservations()) 
+    FOR(o, pomdpProblem->getNumObservations())
     {
 	stringstream sstream;
 	sstream << "Obs " << 0 ;
@@ -302,11 +302,11 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDP(POMDP* pomdpProblem)
     XYTrans->matrix.resize(numActions);
     XYTrans->matrixTr.resize(numActions);
     result->obsProb->matrix.resize(numActions);
-    result->obsProb->matrixTr.resize(numActions); 
+    result->obsProb->matrixTr.resize(numActions);
     result->XTrans->matrix.resize(numActions);
     result->XTrans->matrixTr.resize(numActions);
 
-    FOR (a, numActions) 
+    FOR (a, numActions)
     {
 	XYTrans->matrix[a].resize(1);
 	XYTrans->matrix[a][0] = &(pomdpProblem->T[a]);
@@ -326,7 +326,7 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDP(POMDP* pomdpProblem)
     }
 
     kmatrix_transpose_in_place( Tdummy );
-    FOR (a, numActions) 
+    FOR (a, numActions)
     {
 	result->XTrans->matrixTr[a].resize(1);
 	result->XTrans->matrixTr[a][0] = new SparseMatrix();
@@ -334,6 +334,7 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDP(POMDP* pomdpProblem)
     }
 
     result->initialBeliefY = &(pomdpProblem->initialBelief);
+
     result->initialBeliefStval->bvec = &(pomdpProblem->initialBelief);
     result->initialBeliefStval->sval = 0;
 
@@ -374,11 +375,11 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDP(POMDP* pomdpProblem)
 }
 
 // Convert from Shaowei's POMDP Layer to MOMDP
-SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp, bool assumeUnknownFlag,unsigned int probType) 
+SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp, bool assumeUnknownFlag,unsigned int probType)
 {
     SharedPointer<MOMDP> result (new MOMDP());
     POMDPLayer* layerPtr = &(factoredPomdp->layer);
-    // copy over state list 
+    // copy over state list
     result->stateList = factoredPomdp->stateList;
     result->observationList = factoredPomdp->observationList;
     result->actionList = factoredPomdp->actionList;
@@ -388,7 +389,7 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
     result->YTrans = XYTrans;  // Default to StateTransitionXY, but may change to StateTransitionXXpY if problem is MIXED_REPARAM
 
 
-    // initialize pointers to NULL so that we can tell the difference when it is actually pointing to something useful	
+    // initialize pointers to NULL so that we can tell the difference when it is actually pointing to something useful
     //POMDP information
 
     // SYL040909 commented out
@@ -397,15 +398,15 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
     // 	// R(s,a)
     // 	//T[a](s,s'), Ttr[a](s',s), O[a](s',o)
     // 	vector<SharedPointer<SparseMatrix> > *pomdpOtr;
-    // 
+    //
     // 	// TX[a][x](y,x'), TXtr[a][x](x',y), TY[a][x](y,y'), TYtr[a][x](y',y)
     // 	// O[a][x'](y',o), Otr[a][x'](o,y')
     // 	vector<vector<SharedPointer<SparseMatrix> > > TX, TXtr, TY, TYtr, O, Otr;
 
-    result->pomdpR = NULL; 
-    result->pomdpT = NULL; 
-    result->pomdpTtr = NULL; 
-    result->pomdpO = NULL; 
+    result->pomdpR = NULL;
+    result->pomdpT = NULL;
+    result->pomdpTtr = NULL;
+    result->pomdpO = NULL;
     // pomdpOtr = NULL; // SYL040909 commented out
 
     int numStates = 0;
@@ -414,9 +415,8 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
     int numActions = 0;
     int numObservations = 0;
 
-
-    if (probType == MIXED || probType == MIXED_REPARAM) 
-    { 
+    if (probType == MIXED || probType == MIXED_REPARAM)
+    {
 	// mixed observable
 
 	numStates = layerPtr->numStatesUnobs;
@@ -449,13 +449,13 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
 	  XYTrans->matrixTr =layerPtr->TYtr;
 	} else { // probType == MIXED_REPARAM
           result->hasIntraslice = true;
-          
+
 	  StateTransitionXXpY* XXpYTrans = new StateTransitionXXpY();
 	  XXpYTrans->matrix = layerPtr->TY_reparam;
 	  XXpYTrans->matrixTr = layerPtr->TYtr_reparam;
 	  result->YTrans = XXpYTrans;}
 
-	if (assumeUnknownFlag) 
+	if (assumeUnknownFlag)
 	{ // this option only makes sense for mixed observable cases
 
 	    result->pomdpR = new SparseMatrix;
@@ -471,7 +471,7 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
 	    //*pomdpOtr = layerPtr->pomdpOtr;  // SYL040909 commented out
 	}
 
-	if (probType == MIXED) {	  
+	if (probType == MIXED) {
 	  copy(*result->initialBeliefY, layerPtr->initialBeliefY);
 	  copy(*(result->initialBeliefStval->bvec), layerPtr->initialBeliefY); // copy the belief into the bvec field of initialBeliefStval
 	} else {
@@ -479,19 +479,19 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
           FOREACH(SparseVector, vec, layerPtr->initialBeliefY_reparam) {
             result->initialBeliefYByX.push_back(new SparseVector(*vec));
           }
-          
+
 	  //TODO(haoyu) How to specify bvec? (This is only used in evaluator and simulator.
 	  //copy(*(result->initialBeliefStval->bvec), layerPtr->initialBeliefY_reparam[0]);
           result->initialBeliefStval->bvec = NULL;
 	}
 	result->initialBeliefStval->sval = layerPtr->initialStateX;
-        
+
 	copy(*result->initialBeliefX, layerPtr->initialBeliefX);
 
 
 
-    } 
-    else if (probType == FULLY_UNOBSERVED) 
+    }
+    else if (probType == FULLY_UNOBSERVED)
     { // all state variables are unobserved
 
 	numStates = layerPtr->pomdpNumStates; // numStates = layerPtr->numStatesUnobs;
@@ -501,7 +501,7 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
 
 	numActions = layerPtr->pomdpNumActions;   // numActions = layerPtr->numActions;
 	numObservations = layerPtr->pomdpNumObservations; // numObservations = layerPtr->numObservations;
-	result->discount = layerPtr->pomdpDiscount;  //discount = layerPtr->discount; 
+	result->discount = layerPtr->pomdpDiscount;  //discount = layerPtr->discount;
 
 	//isPOMDPTerminalState.resize(numStatesObs);
 	//isPOMDPTerminalState = layerPtr->isPOMDPTerminalState;
@@ -586,7 +586,7 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
 
 	// SYL040909
 	kmatrix_transpose_in_place( Tdummy );
-	FOR (a, numActions) 
+	FOR (a, numActions)
 	{
 	    result->XTrans->matrixTr[a].resize(1);
 	    result->XTrans->matrixTr[a][0] = new SparseMatrix();
@@ -601,8 +601,8 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
 	// 			TXtr[a][0] = new SparseMatrix();
 	// 			copy( *TXtr[a][0], Tdummy );
 	// 		}
-	// 
-	// 
+	//
+	//
 	// 		result->rewards->matrix = R;
 	// 		result->XTrans->matrix = TX;
 	// 		result->XTrans->matrixTr = TXtr;
@@ -612,20 +612,20 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
 	// 		result->obsProb->matrixTr = Otr;
 
     }
-    else if (probType == FULLY_OBSERVED) 
+    else if (probType == FULLY_OBSERVED)
     {
-	numStates = layerPtr->pomdpNumStates; 
+	numStates = layerPtr->pomdpNumStates;
 	numStatesUnobs = 1;
 	numStatesObs = numStates;
 
-	numActions = layerPtr->pomdpNumActions;   
-	numObservations = layerPtr->pomdpNumObservations; 
-	result->discount = layerPtr->pomdpDiscount;  
+	numActions = layerPtr->pomdpNumActions;
+	numObservations = layerPtr->pomdpNumObservations;
+	result->discount = layerPtr->pomdpDiscount;
 
 	result->initialBeliefY->resize(1);
 	result->initialBeliefY->push_back(0,1);
 	copy(*(result->initialBeliefStval->bvec), *result->initialBeliefY); // copy the belief into the bvec field of initialBeliefStval
-	result->initialBeliefStval->sval = -1; 
+	result->initialBeliefStval->sval = -1;
 
 	// define initialBeliefX for problems with all unobserved variables
 	result->initialBeliefX->resize(numStates);
@@ -650,7 +650,7 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
 	result->XTrans->matrixTr.resize(numActions);
 
 	// deal with the dummy TY and TYtr matrices
-	kmatrix Tdummy; 
+	kmatrix Tdummy;
 	Tdummy.resize(1, 1);
 	kmatrix_set_entry(Tdummy, 0, 0, 1.0);
 
@@ -702,19 +702,19 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
 	    // result->isPOMDPTerminalState[s][0] = layerPtr->pomdpIsPOMDPTerminalState[s];
 	// }
 
-    } 
+    }
 
     // post-process: calculate isPOMDPTerminalState
 	result->isPOMDPTerminalState.resize(numStatesObs);
 
-	FOR (state_idx, numStatesObs) 
+	FOR (state_idx, numStatesObs)
 	{
 	    result->isPOMDPTerminalState[state_idx].resize(numStatesUnobs, /* initialValue = */true);
-	    FOR (s, numStatesUnobs) 
+	    FOR (s, numStatesUnobs)
 	    {
-          FOR (a, numActions) 
+          FOR (a, numActions)
           {
-            // Probability of self looping: (a, state_idx, s) -> (state_idx, s) 
+            // Probability of self looping: (a, state_idx, s) -> (state_idx, s)
             double probX = (*result->XTrans->getMatrix(a, state_idx)) (s, state_idx);
             double probY = (*result->YTrans->getMatrix(a, state_idx, state_idx)) (s,s);
             if ( fabs(1.0 - probX) > OBS_IS_ZERO_EPS || fabs(1.0 - probY) > OBS_IS_ZERO_EPS || (*result->rewards->matrix[state_idx])(s,a) != 0.0) {
@@ -726,7 +726,7 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
 	}
 
     // States
-    FOR(x, numStatesObs) 
+    FOR(x, numStatesObs)
     {
 	StateVal temp;
 	stringstream sstream;
@@ -735,7 +735,7 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
 	result->XStates->add(temp);
     }
 
-    FOR(y, numStatesUnobs) 
+    FOR(y, numStatesUnobs)
     {
 	stringstream sstream;
 	sstream << "Y State " << y ;
@@ -746,7 +746,7 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
 
     // Action
 
-    FOR(a, numActions) 
+    FOR(a, numActions)
     {
 	stringstream sstream;
 	sstream << "Action " << a ;
@@ -755,7 +755,7 @@ SharedPointer<MOMDP> MOMDP::convertMOMDPFromPOMDPX(FactoredPomdp* factoredPomdp,
 	result->actions->add(tempAction);
     }
     // Observations
-    FOR(o, numObservations) 
+    FOR(o, numObservations)
     {
 	stringstream sstream;
 	sstream << "Obs " << o ;
@@ -785,9 +785,9 @@ bool MOMDP::getIsTerminalState(BeliefWithState &b)
     SharedPointer<belief_vector> s = b.bvec;
     state_val stateidx = b.sval;
 
-    FOR_CV ((*s)) 
+    FOR_CV ((*s))
     {
-	if (!isPOMDPTerminalState[stateidx][CV_INDEX(s)]) 
+	if (!isPOMDPTerminalState[stateidx][CV_INDEX(s)])
 	{
 	    nonTerminalSum += CV_VAL(s);
 	}
@@ -795,7 +795,7 @@ bool MOMDP::getIsTerminalState(BeliefWithState &b)
     return (nonTerminalSum < 1e-10);
 }
 
-map<string, string> MOMDP::getActionsSymbols(int actionNum) 
+map<string, string> MOMDP::getActionsSymbols(int actionNum)
 {
     map<string, string> result;
     if(actionList.size() == 0)
@@ -822,7 +822,7 @@ map<string, string> MOMDP::getActionsSymbols(int actionNum)
 }
 
 
-map<string, string> MOMDP::getFactoredObservedStatesSymbols(int stateNum) 
+map<string, string> MOMDP::getFactoredObservedStatesSymbols(int stateNum)
 {
     map<string, string> result;
     if(stateList.size() == 0)
@@ -849,7 +849,7 @@ map<string, string> MOMDP::getFactoredObservedStatesSymbols(int stateNum)
 }
 
 
-map<string, string> MOMDP::getFactoredUnobservedStatesSymbols(int stateNum) 
+map<string, string> MOMDP::getFactoredUnobservedStatesSymbols(int stateNum)
 {
     map<string, string> result;
     if(stateList.size() == 0)
@@ -863,11 +863,11 @@ map<string, string> MOMDP::getFactoredUnobservedStatesSymbols(int stateNum)
 
     int quotient, remainder;
     quotient = stateNum;
-    for (int i = (int) stateList.size() - 1; i >= 0; i--) 
+    for (int i = (int) stateList.size() - 1; i >= 0; i--)
     {
 
 	const State& s = stateList[i];
-	if (!(s.getObserved())) 
+	if (!(s.getObserved()))
 	{
 	    remainder = quotient % s.getValueEnum().size();
 	    result[s.getVNamePrev()] = s.getValueEnum()[remainder];
@@ -878,7 +878,7 @@ map<string, string> MOMDP::getFactoredUnobservedStatesSymbols(int stateNum)
     return result;
 }
 
-map<string, string> MOMDP::getObservationsSymbols(int observationNum) 
+map<string, string> MOMDP::getObservationsSymbols(int observationNum)
 {
     map<string, string> result;
     if(observationList.size() == 0)
@@ -904,7 +904,7 @@ map<string, string> MOMDP::getObservationsSymbols(int observationNum)
 }
 
 // Commented out during code merge on 02102009
-/* 
+/*
 // TODO:: remove this after fixing Simulator assume unknown flag
 belief_vector& MOMDP::getNextBelief(belief_vector& result,const belief_vector& b, int a, int o)
 {

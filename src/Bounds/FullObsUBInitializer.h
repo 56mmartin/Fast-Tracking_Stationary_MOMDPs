@@ -1,7 +1,7 @@
-/** 
+/**
 * Part of the this code is derived from ZMDP: http://www.cs.cmu.edu/~trey/zmdp/
 * ZMDP is released under Apache License 2.0
-* The rest of the code is released under GPL v2 
+* The rest of the code is released under GPL v2
 */
 
 
@@ -16,7 +16,7 @@ namespace momdp {
 
 	class FullObsUBInitializer {
 	public:
-		SharedPointer<MOMDP> pomdp;	
+		SharedPointer<MOMDP> pomdp;
 
   // data and methods for factored version
   std::vector<DenseVector> alphaByState;
@@ -39,6 +39,13 @@ namespace momdp {
 		void QNextAlphaAction(std::vector<DenseVector>& resultByState, int a);
 		double QValueIterationOneStep(void);
 		void QValueIteration(SharedPointer<MOMDP> _pomdp, double eps);
+
+		// adaptive management
+		void findBestActions(vector< vector< int> > & bestActions);
+		void evaluateCornerPolicies(SharedPointer<MOMDP> _pomdp, double eps,
+			const vector< int > & bestActionsY, vector< alpha_vector > & alpha);
+		double fixedPolicyAlphaUpdate(const vector< int> & bestActionsY,
+								vector< alpha_vector > & alpha);
 
 // data and methods for factored version
 		vector<alpha_vector> actionAlphas;

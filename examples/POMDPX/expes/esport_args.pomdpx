@@ -1,0 +1,2303 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pomdpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1" id="esport" xsi:noNamespaceSchemaLocation="pomdpx.xsd">
+  <Discount>0.9</Discount>
+  <Variable>
+    <StateVar vnamePrev="a1" vnameCurr="na1" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="b1" vnameCurr="nb1" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="c1" vnameCurr="nc1" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="d1" vnameCurr="nd1" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="e1" vnameCurr="ne1" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="ap" vnameCurr="nap" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="bp" vnameCurr="nbp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="cp" vnameCurr="ncp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="dp" vnameCurr="ndp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="ep" vnameCurr="nep" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="fp" vnameCurr="nfp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="gp" vnameCurr="ngp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="hp" vnameCurr="nhp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="f_a" vnameCurr="nf_a" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="g_a" vnameCurr="ng_a" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="b_f" vnameCurr="nb_f" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="c_f" vnameCurr="nc_f" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="g_c" vnameCurr="ng_c" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="d_g" vnameCurr="nd_g" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="e_g" vnameCurr="ne_g" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="h_b" vnameCurr="nh_b" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="h2" vnameCurr="nh2" fullyObs="false">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="g2" vnameCurr="ng2" fullyObs="false">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="f2" vnameCurr="nf2" fullyObs="false">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="_r3" vnameCurr="_nr3" fullyObs="false">
+      <ValueEnum>alt1 alt2</ValueEnum>
+    </StateVar>
+    <ActionVar vname="action">
+      <ValueEnum>adda addb addc adde addd</ValueEnum>
+    </ActionVar>
+    <RewardVar vname="reward"/>
+  </Variable>
+  <InitialStateBelief>
+    <CondProb>
+      <Var>a1</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s1</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>b1</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s1</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>c1</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s1</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>d1</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s1</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>e1</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s1</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ap</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>bp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>cp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>dp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ep</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>fp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>gp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>hp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>f_a</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>g_a</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>b_f</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>c_f</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>g_c</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>d_g</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>e_g</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>h_b</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>h2</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>uniform</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>g2</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>uniform</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>f2</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>uniform</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>_r3</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>0.8 0.2</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+  </InitialStateBelief>
+  <StateTransitionFunction>
+    <CondProb>
+      <Var>_nr3</Var>
+      <Parent>action</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* -</Instance>
+          <ProbTable>0.8 0.2</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>na1</Var>
+      <Parent>action a1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nb1</Var>
+      <Parent>action b1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nc1</Var>
+      <Parent>action c1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nd1</Var>
+      <Parent>action d1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ne1</Var>
+      <Parent>action e1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nh2</Var>
+      <Parent>action h2</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ng2</Var>
+      <Parent>action g2</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nf2</Var>
+      <Parent>action f2</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nap</Var>
+      <Parent>action ap a1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>adda * s1 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nbp</Var>
+      <Parent>action bp b1 fp c1 b_f c_f</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>addb * s1 s1 s1 s0 s0 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nb_f</Var>
+      <Parent>action b_f b1 fp c1 c_f</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>addb s0 s1 s1 s1 s0 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ncp</Var>
+      <Parent>action cp b1 fp c1 b_f c_f</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>addc * s1 s1 s1 s0 s0 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nc_f</Var>
+      <Parent>action c_f b1 fp c1 b_f</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>addc s0 s1 s1 s1 s0 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nep</Var>
+      <Parent>action ep d1 gp e1 d_g e_g</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>adde * s1 s1 s1 s0 s0 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ne_g</Var>
+      <Parent>action e_g d1 gp e1 d_g</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>adde s0 s1 s1 s1 s0 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ndp</Var>
+      <Parent>action dp d1 gp e1 d_g e_g</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>addd * s1 s1 s1 s0 s0 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nd_g</Var>
+      <Parent>action d_g d1 gp e1 e_g</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>addd s0 s1 s1 s1 s0 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nhp</Var>
+      <Parent>action hp a1 h2 bp h_b g2 cp g_c ap f2 f_a g_a b1 fp c1 b_f c_f d1 gp e1 d_g e_g _r3</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * * * * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>adda - s1 s1 s1 s0 * * * * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adda - s1 s1 s1 s0 s1 * * * s1 s0 s0 * * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adda - s1 s1 s1 s0 s1 * * * s1 s0 s0 * * * * * * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>adda - s1 s1 s1 s0 s1 s1 s0 * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda - s1 s1 s1 s0 s1 s1 s0 * s1 s0 s0 * * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda - s1 s1 s1 s0 s1 s1 s0 * s1 s0 s0 * * * * * * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>addb - * s1 * s0 * * * * * * * s1 s1 s1 s0 s0 * * * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addb - * s1 * s0 s1 * * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addb - * s1 * s0 s1 * * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addb - * s1 * s0 s1 s1 s0 * * * * s1 s1 s1 s0 s0 * * * * * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addb - * s1 * s0 s1 s1 s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addb - * s1 * s0 s1 s1 s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>addc - * s1 s1 s0 * * * * * * * s1 s1 s1 s0 s0 * * * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addc - * s1 s1 s0 s1 * * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addc - * s1 s1 s0 s1 * * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addc - * s1 s1 s0 s1 * s0 * * * * s1 s1 s1 s0 s0 * * * * * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc - * s1 s1 s0 s1 * s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc - * s1 s1 s0 s1 * s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>adde - * s1 s1 s0 * * * * * * * * * * * * s1 s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adde - * s1 s1 s0 s1 * * s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adde - * s1 s1 s0 s1 * * s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>adde - * s1 s1 s0 s1 s1 s0 * * * * * * * * * s1 s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde - * s1 s1 s0 s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde - * s1 s1 s0 s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>addd - * s1 s1 s0 * * * * * * * * * * * * s1 s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addd - * s1 s1 s0 s1 * * s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addd - * s1 s1 s0 s1 * * s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addd - * s1 s1 s0 s1 s1 s0 * * * * * * * * * s1 s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addd - * s1 s1 s0 s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addd - * s1 s1 s0 s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nh_b</Var>
+      <Parent>action h_b a1 h2 bp g2 cp g_c ap f2 f_a g_a b1 fp c1 b_f c_f d1 gp e1 d_g e_g _r3</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * * * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>adda s0 s1 s1 s1 * * * * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adda s0 s1 s1 s1 s1 * * * s1 s0 s0 * * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adda s0 s1 s1 s1 s1 * * * s1 s0 s0 * * * * * * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>adda s0 s1 s1 s1 s1 s1 s0 * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda s0 s1 s1 s1 s1 s1 s0 * s1 s0 s0 * * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda s0 s1 s1 s1 s1 s1 s0 * s1 s0 s0 * * * * * * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>addb s0 * s1 * * * * * * * * s1 s1 s1 s0 s0 * * * * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addb s0 * s1 * s1 * * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addb s0 * s1 * s1 * * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addb s0 * s1 * s1 s1 s0 * * * * s1 s1 s1 s0 s0 * * * * * * -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addb s0 * s1 * s1 s1 s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addb s0 * s1 * s1 s1 s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>addc s0 * s1 s1 * * * * * * * s1 s1 s1 s0 s0 * * * * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addc s0 * s1 s1 s1 * * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addc s0 * s1 s1 s1 * * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addc s0 * s1 s1 s1 * s0 * * * * s1 s1 s1 s0 s0 * * * * * * -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc s0 * s1 s1 s1 * s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc s0 * s1 s1 s1 * s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>adde s0 * s1 s1 * * * * * * * * * * * * s1 s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adde s0 * s1 s1 s1 * * s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adde s0 * s1 s1 s1 * * s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>adde s0 * s1 s1 s1 s1 s0 * * * * * * * * * s1 s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde s0 * s1 s1 s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde s0 * s1 s1 s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>addd s0 * s1 s1 * * * * * * * * * * * * s1 s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addd s0 * s1 s1 s1 * * s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addd s0 * s1 s1 s1 * * s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addd s0 * s1 s1 s1 s1 s0 * * * * * * * * * s1 s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addd s0 * s1 s1 s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addd s0 * s1 s1 s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ngp</Var>
+      <Parent>action gp a1 h2 bp h_b g2 cp g_c ap f2 f_a g_a b1 fp c1 b_f c_f d1 e1 d_g e_g _r3</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * * * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>adda - s1 * * * s1 * * * s1 s0 s0 * * * * * * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>adda - s1 * * * s1 s1 s0 * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adda - s1 * * * s1 s1 s0 * s1 s0 s0 * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adda - s1 * * * s1 s1 s0 * s1 s0 s0 * * * * * * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adda - s1 s1 s1 s0 s1 * * * s1 s0 s0 * * * * * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>adda - s1 s1 s1 s0 s1 s1 s0 * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda - s1 s1 s1 s0 s1 s1 s0 * s1 s0 s0 * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda - s1 s1 s1 s0 s1 s1 s0 * s1 s0 s0 * * * * * * * * * alt2 -</Instance>
+          <ProbTable>0.3333333333333333 0.6666666666666666 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addb - * * * * s1 * * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>addb - * * * * s1 s1 s0 * * * * s1 s1 s1 s0 s0 * * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addb - * * * * s1 s1 s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addb - * * * * s1 s1 s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addb - * s1 * s0 s1 * * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addb - * s1 * s0 s1 s1 s0 * * * * s1 s1 s1 s0 s0 * * * * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addb - * s1 * s0 s1 s1 s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addb - * s1 * s0 s1 s1 s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * alt2 -</Instance>
+          <ProbTable>0.3333333333333333 0.6666666666666666 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addc - * * * * s1 * * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>addc - * * * * s1 * s0 * * * * s1 s1 s1 s0 s0 * * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addc - * * * * s1 * s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addc - * * * * s1 * s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addc - * s1 s1 s0 s1 * * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addc - * s1 s1 s0 s1 * s0 * * * * s1 s1 s1 s0 s0 * * * * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc - * s1 s1 s0 s1 * s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc - * s1 s1 s0 s1 * s0 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * alt2 -</Instance>
+          <ProbTable>0.3333333333333333 0.6666666666666666 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>adde s1 * * * * s1 * * s1 s1 s0 s0 * * * * * s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>adde s1 * * * * s1 s1 s0 * * * * * * * * * s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adde s1 * * * * s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adde s1 * * * * s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adde s1 * s1 s1 s0 s1 * * s1 s1 s0 s0 * * * * * s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>adde s1 * s1 s1 s0 s1 s1 s0 * * * * * * * * * s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde s1 * s1 s1 s0 s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde s1 * s1 s1 s0 s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addd s1 * * * * s1 * * s1 s1 s0 s0 * * * * * s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>addd s1 * * * * s1 s1 s0 * * * * * * * * * s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addd s1 * * * * s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addd s1 * * * * s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addd s1 * s1 s1 s0 s1 * * s1 s1 s0 s0 * * * * * s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addd s1 * s1 s1 s0 s1 s1 s0 * * * * * * * * * s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addd s1 * s1 s1 s0 s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addd s1 * s1 s1 s0 s1 s1 s0 s1 s1 s0 s0 * * * * * s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ng_c</Var>
+      <Parent>action g_c a1 h2 bp h_b g2 cp ap f2 f_a g_a b1 fp c1 b_f c_f d1 gp e1 d_g e_g _r3</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * * * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>adda s0 s1 * * * s1 s1 * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adda s0 s1 * * * s1 s1 * s1 s0 s0 * * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adda s0 s1 * * * s1 s1 * s1 s0 s0 * * * * * * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>adda s0 s1 s1 s1 s0 s1 s1 * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda s0 s1 s1 s1 s0 s1 s1 * s1 s0 s0 * * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda s0 s1 s1 s1 s0 s1 s1 * s1 s0 s0 * * * * * * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>addb s0 * * * * s1 s1 * * * * s1 s1 s1 s0 s0 * * * * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addb s0 * * * * s1 s1 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addb s0 * * * * s1 s1 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addb s0 * s1 * s0 s1 s1 * * * * s1 s1 s1 s0 s0 * * * * * * -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addb s0 * s1 * s0 s1 s1 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addb s0 * s1 * s0 s1 s1 s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>addc s0 * * * * s1 * * * * * s1 s1 s1 s0 s0 * * * * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addc s0 * * * * s1 * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addc s0 * * * * s1 * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addc s0 * s1 s1 s0 s1 * * * * * s1 s1 s1 s0 s0 * * * * * * -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc s0 * s1 s1 s0 s1 * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc s0 * s1 s1 s0 s1 * s1 s1 s0 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>adde s0 * * * * s1 s1 * * * * * * * * * s1 s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adde s0 * * * * s1 s1 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adde s0 * * * * s1 s1 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>adde s0 * s1 s1 s0 s1 s1 * * * * * * * * * s1 s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde s0 * s1 s1 s0 s1 s1 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde s0 * s1 s1 s0 s1 s1 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>addd s0 * * * * s1 s1 * * * * * * * * * s1 s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addd s0 * * * * s1 s1 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addd s0 * * * * s1 s1 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addd s0 * s1 s1 s0 s1 s1 * * * * * * * * * s1 s1 s1 s0 s0 * -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addd s0 * s1 s1 s0 s1 s1 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addd s0 * s1 s1 s0 s1 s1 s1 s1 s0 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nfp</Var>
+      <Parent>action fp a1 h2 bp h_b g2 cp g_c ap f2 f_a g_a b1 c1 b_f c_f d1 gp e1 d_g e_g _r3</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * * * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>adda - s1 * * * s1 * * * s1 s0 s0 * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adda - s1 * * * s1 s1 s0 * s1 s0 s0 * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adda - s1 s1 s1 s0 s1 * * * s1 s0 s0 * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda - s1 s1 s1 s0 s1 s1 s0 * s1 s0 s0 * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addb s1 * * * * s1 * * s1 s1 s0 s0 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addb s1 * * * * s1 s1 s0 s1 s1 s0 s0 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addb s1 * s1 * s0 s1 * * s1 s1 s0 s0 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addb s1 * s1 * s0 s1 s1 s0 s1 s1 s0 s0 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addc s1 * * * * s1 * * s1 s1 s0 s0 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addc s1 * * * * s1 * s0 s1 s1 s0 s0 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addc s1 * s1 s1 s0 s1 * * s1 s1 s0 s0 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc s1 * s1 s1 s0 s1 * s0 s1 s1 s0 s0 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>adde - * * * * s1 * * s1 s1 s0 s0 * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adde - * * * * s1 s1 s0 s1 s1 s0 s0 * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adde - * s1 s1 s0 s1 * * s1 s1 s0 s0 * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde - * s1 s1 s0 s1 s1 s0 s1 s1 s0 s0 * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addd - * * * * s1 * * s1 s1 s0 s0 * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addd - * * * * s1 s1 s0 s1 s1 s0 s0 * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addd - * s1 s1 s0 s1 * * s1 s1 s0 s0 * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addd - * s1 s1 s0 s1 s1 s0 s1 s1 s0 s0 * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nf_a</Var>
+      <Parent>action f_a a1 h2 bp h_b g2 cp g_c ap f2 g_a b1 fp c1 b_f c_f d1 gp e1 d_g e_g _r3</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * * * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>adda s0 s1 * * * s1 * * * s1 s0 * * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adda s0 s1 * * * s1 s1 s0 * s1 s0 * * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adda s0 s1 s1 s1 s0 s1 * * * s1 s0 * * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda s0 s1 s1 s1 s0 s1 s1 s0 * s1 s0 * * * * * * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addb s0 * * * * s1 * * s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addb s0 * * * * s1 s1 s0 s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addb s0 * s1 * s0 s1 * * s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addb s0 * s1 * s0 s1 s1 s0 s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addc s0 * * * * s1 * * s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addc s0 * * * * s1 * s0 s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addc s0 * s1 s1 s0 s1 * * s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc s0 * s1 s1 s0 s1 * s0 s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>adde s0 * * * * s1 * * s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adde s0 * * * * s1 s1 s0 s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adde s0 * s1 s1 s0 s1 * * s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde s0 * s1 s1 s0 s1 s1 s0 s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addd s0 * * * * s1 * * s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addd s0 * * * * s1 s1 s0 s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addd s0 * s1 s1 s0 s1 * * s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addd s0 * s1 s1 s0 s1 s1 s0 s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ng_a</Var>
+      <Parent>action g_a a1 h2 bp h_b g2 cp g_c ap f2 f_a b1 fp c1 b_f c_f d1 gp e1 d_g e_g _r3</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * * * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>adda s0 s1 * * * s1 * * * s1 s0 * * * * * * * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adda s0 s1 * * * s1 s1 s0 * s1 s0 * * * * * * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adda s0 s1 s1 s1 s0 s1 * * * s1 s0 * * * * * * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda s0 s1 s1 s1 s0 s1 s1 s0 * s1 s0 * * * * * * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addb s0 * * * * s1 * * s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addb s0 * * * * s1 s1 s0 s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addb s0 * s1 * s0 s1 * * s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addb s0 * s1 * s0 s1 s1 s0 s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addc s0 * * * * s1 * * s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addc s0 * * * * s1 * s0 s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addc s0 * s1 s1 s0 s1 * * s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc s0 * s1 s1 s0 s1 * s0 s1 s1 s0 s1 s1 s1 s0 s0 * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>adde s0 * * * * s1 * * s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adde s0 * * * * s1 s1 s0 s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adde s0 * s1 s1 s0 s1 * * s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde s0 * s1 s1 s0 s1 s1 s0 s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addd s0 * * * * s1 * * s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addd s0 * * * * s1 s1 s0 s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addd s0 * s1 s1 s0 s1 * * s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addd s0 * s1 s1 s0 s1 s1 s0 s1 s1 s0 * * * * * s1 s1 s1 s0 s0 alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+  </StateTransitionFunction>
+  <RewardFunction>
+    <Func>
+      <Var>reward</Var>
+      <Parent>nap nf_a ng_a nb_f nc_f nd_g ne_g nh_b ng_c</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* * * * * * * * * </Instance>
+          <ValueTable>-1</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s0 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s0 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s0 s1 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 s1 s1 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+      </Parameter>
+    </Func>
+  </RewardFunction>
+</pomdpx>

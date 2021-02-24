@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Policy version="0.1" type="value" model="../../../Dropbox/Toolbox - Martin/Mosquito Program - Last version/Mosquito2.pomdpx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="policyx.xsd">
+<AlphaVector vectorLength="6" numObsValue="9" numVectors="9">
+<Vector action="0" obsValue="0">92.6929 25.3869 159.518 111.188 29.2576 192.928 </Vector>
+<Vector action="2" obsValue="1">87.4903 22.3569 145.458 106.236 26.2484 180.339 </Vector>
+<Vector action="6" obsValue="2">89.5172 23.3737 145.205 108.274 27.3052 180.059 </Vector>
+<Vector action="5" obsValue="3">85.781 21.5084 133.259 104.323 25.251 167.161 </Vector>
+<Vector action="0" obsValue="4">92.6927 25.3869 159.517 111.187 29.2576 192.927 </Vector>
+<Vector action="2" obsValue="5">87.4893 22.3569 145.457 106.234 26.2484 180.337 </Vector>
+<Vector action="6" obsValue="6">89.5172 23.3737 145.205 108.274 27.3052 180.059 </Vector>
+<Vector action="5" obsValue="7">85.781 21.5084 133.259 104.323 25.251 167.161 </Vector>
+<Vector action="7" obsValue="8">0 0 0 0 0 0 </Vector>
+</AlphaVector> </Policy>

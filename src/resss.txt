@@ -1,0 +1,29 @@
+
+Loading the model ...
+  input file   : ../examples/POMDPX/expes/bipartite_6_initial.pomdpx
+  loading time : 1.53s 
+
+SARSOP initializing ...
+  initialization time : 1.23s
+
+-------------------------------------------------------------------------------
+ Time   |#Trial |#Backup |LBound    |UBound    |Precision  |#Alphas |#Beliefs  
+-------------------------------------------------------------------------------
+ 1.23    0       0        100        100        -6.84267e-10 6144     1        
+ 1.23    1       1        100        100        -6.15827e-10 6145     1        
+-------------------------------------------------------------------------------
+
+SARSOP finishing ...
+  target precision reached
+  target precision  : 0.001000
+  precision reached : -0.000000 
+
+-------------------------------------------------------------------------------
+ Time   |#Trial |#Backup |LBound    |UBound    |Precision  |#Alphas |#Beliefs  
+-------------------------------------------------------------------------------
+ 1.23    1       1        100        100        -6.15827e-10 2048     1        
+-------------------------------------------------------------------------------
+
+Writing out policy ...
+  output file : out.policy
+

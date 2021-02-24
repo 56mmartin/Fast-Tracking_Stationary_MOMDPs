@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Policy version="0.1" type="value" model="../../../Dropbox/Toolbox - Martin/Mosquito Program - Last version/Mosquito3.pomdpx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="policyx.xsd">
+<AlphaVector vectorLength="6" numObsValue="17" numVectors="17">
+<Vector action="0" obsValue="0">8.85753 6.88007 9.1517 8.85753 6.88007 9.1517 </Vector>
+<Vector action="0" obsValue="1">8.26203 6.01613 7.9729 8.26203 6.01613 7.9729 </Vector>
+<Vector action="0" obsValue="2">8.52475 6.36012 8.08373 8.52475 6.36012 8.08373 </Vector>
+<Vector action="5" obsValue="3">8.28097 6.01697 7.60621 8.32136 6.06644 7.68922 </Vector>
+<Vector action="0" obsValue="4">8.63366 6.52488 8.08373 8.63366 6.52488 8.08373 </Vector>
+<Vector action="10" obsValue="5">8.35477 6.11496 7.6459 8.39923 6.16944 7.72903 </Vector>
+<Vector action="13" obsValue="6">8.54289 6.36657 7.72177 8.56602 6.39915 7.79089 </Vector>
+<Vector action="5" obsValue="7">8.3242 6.04584 7.24902 8.38029 6.11792 7.364 </Vector>
+<Vector action="0" obsValue="8">8.85786 6.88099 9.15196 8.85786 6.88099 9.15196 </Vector>
+<Vector action="0" obsValue="9">8.25512 6.00683 7.95885 8.25512 6.00683 7.95885 </Vector>
+<Vector action="0" obsValue="10">8.52072 6.35476 8.06913 8.52072 6.35476 8.06913 </Vector>
+<Vector action="5" obsValue="11">8.27035 6.00939 7.57236 8.31023 6.05848 7.65519 </Vector>
+<Vector action="0" obsValue="12">8.63105 6.5215 8.06913 8.63105 6.5215 8.06913 </Vector>
+<Vector action="10" obsValue="13">8.36045 6.11894 7.66449 8.40485 6.17376 7.74606 </Vector>
+<Vector action="13" obsValue="14">8.54431 6.36721 7.73108 8.56721 6.39974 7.79898 </Vector>
+<Vector action="5" obsValue="15">8.32508 6.04653 7.24299 8.38145 6.119 7.35859 </Vector>
+<Vector action="16" obsValue="16">0 0 0 0 0 0 </Vector>
+</AlphaVector> </Policy>

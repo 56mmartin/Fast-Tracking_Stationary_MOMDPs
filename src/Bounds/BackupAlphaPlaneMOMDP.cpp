@@ -2,7 +2,7 @@
 #include "BeliefCache.h"
 #include "AlphaPlanePool.h"
 #include "SARSOP.h"
-#include "exception" 
+#include "exception"
 #include <list>
 #include <vector>
 #include <cfloat>
@@ -23,6 +23,14 @@ SharedPointer<AlphaPlane> BackupAlphaPlaneMOMDP::backup(BeliefTreeNode* cn)
 	SharedPointer<AlphaPlane> newPlaneP (new AlphaPlane());
 	//AlphaPlane newPlane;  Inefficient implementation, commented out by Yanzhu 15 Aug 2007
 
+//    cout << beliefCacheSet[cn->cacheIndex.sval]->getRow(cn->cacheIndex.row)->LB<< endl;
+//    cout << beliefCacheSet[cn->cacheIndex.sval]->getRow(cn->cacheIndex.row)->LB<< endl;
+//    int pp; cin >> pp;
+
+	AlphaPlanePool* bound = boundSet->set[cn->s->sval];
+//    cout << "boundset: " << (bound->beliefCache) << endl;
+ //   cout << "boundset: " << bound << endl;
+
 	double lbVal;
 	//get a new plane at the belief
 	lbVal = getNewAlphaPlane(*newPlaneP, *cn);
@@ -32,9 +40,8 @@ SharedPointer<AlphaPlane> BackupAlphaPlaneMOMDP::backup(BeliefTreeNode* cn)
 	newPlaneP->init(solver->numBackups, cn);//to set its timestamp and put cn in its domination list
 	//add the new plane as the best alpha for the belief
 
-	AlphaPlanePool* bound = boundSet->set[cn->s->sval];
 	list<SharedPointer<AlphaPlane> >* alphas = bound->dataTable->get(cn->cacheIndex.row).ALPHA_PLANES;
-	
+
 	if(alphas->size()>0)
 	{
 		SharedPointer<AlphaPlane>frontAlpha = alphas->front();
@@ -46,8 +53,16 @@ SharedPointer<AlphaPlane> BackupAlphaPlaneMOMDP::backup(BeliefTreeNode* cn)
 	alphas->push_front(newPlaneP);
 	// TODO:: migrate the addAlphaPlane(newPlaneP) to algorithm based code
 
-	bound->addAlphaPlane(newPlaneP); 
+	bound->addAlphaPlane(newPlaneP);
+//    cout << beliefCacheSet[cn->cacheIndex.sval]->getRow(cn->cacheIndex.row)->LB<< endl;
+//    cout << beliefCacheSet[cn->cacheIndex.sval]->getRow(cn->cacheIndex.row)->LB<< endl;
+//    double vvv = bound->beliefCache->getRow( cn->cacheIndex.row)->LB;
+//	if (vvv>lbVal){
+//        cout << "previous: " << vvv << "   new: " << lbVal << endl;
+//        cin >> vvv;
+//	}
 	bound->beliefCache->getRow( cn->cacheIndex.row)->LB = lbVal;
+//    cout << "end" << endl<< endl;
 	bound->dataTable->set(cn->cacheIndex.row).ALPHA_TIME_STAMP = newPlaneP->timeStamp;
 
 	return newPlaneP;
@@ -55,10 +70,8 @@ SharedPointer<AlphaPlane> BackupAlphaPlaneMOMDP::backup(BeliefTreeNode* cn)
 
 
 
-/* method: getNewAlphaPlane, saves a n-1 calls to getNewAlphaPlaneQ
-
-*/
-double BackupAlphaPlaneMOMDP::getNewAlphaPlane(AlphaPlane& result, BeliefTreeNode& cn)
+// method: getNewAlphaPlane, saves a n-1 calls to getNewAlphaPlaneQ by choosing the best action first (no vector calculation but just scalar (LB))
+double BackupAlphaPlaneMOMDP::getNewAlphaPlane(AlphaPlane& result, BeliefTreeNode& cn)  // calculates alphaplane by selecting best action.
 {
 	DEBUG_TRACE( cout << "getNewAlphaPlane" << endl; );
 	if(cn.isFringe())
@@ -74,7 +87,7 @@ double BackupAlphaPlaneMOMDP::getNewAlphaPlane(AlphaPlane& result, BeliefTreeNod
 		// -DBL_MAX is the most negative number
 		double maxActionLB = -DBL_MAX;
 		int maxAction = 0;
-		
+
 
 		FOR (a, problem->getNumActions())
 		{
@@ -88,7 +101,7 @@ double BackupAlphaPlaneMOMDP::getNewAlphaPlane(AlphaPlane& result, BeliefTreeNod
 
 				const BeliefTreeObsState* QaXn = Qa.stateOutcomes[Xn];
 				//const BeliefTreeObsState& QaXn = Qa.stateOutcomes[Xn];
-				if (NULL != QaXn ) 
+				if (NULL != QaXn )
 				{
 					FOR (o, QaXn->getNumOutcomes())
 						//FOR (o, QaXn.getNumOutcomes())
@@ -106,16 +119,16 @@ double BackupAlphaPlaneMOMDP::getNewAlphaPlane(AlphaPlane& result, BeliefTreeNod
 							/*	AlphaPlane bestPlane = alphaPlanePool->getBestAlphaPlane(*(childNode));
 							alpha_vector bestalpha = bestPlane->alpha;
 							double childLB = inner_prod(bestalpha, childNode->s.bvec);
-							*/	
-							
-							SharedPointer<AlphaPlane> tempAlpha = boundSet->getBestAlphaPlane(*(childNode));
-							double childLB = inner_prod(*(tempAlpha->alpha), *(childNode->s->bvec));  
+							*/
+
+							SharedPointer<AlphaPlane> tempAlpha = boundSet->getBestAlphaPlane(*(childNode));  //change that for PAM.
+							double childLB = inner_prod(*(tempAlpha->alpha), *(childNode->s->bvec));
 							DEBUG_TRACE( cout << "childLB " << childLB << endl; );
-							
-							
+
+
 							boundSet->set[childNode->cacheIndex.sval]->beliefCache->getRow( childNode->cacheIndex.row)->LB = childLB;
 
-	
+
 
 							//SLOWEST:
 							//								double childLB = alphaPlanePool->getLowerBoundValue(childNode->s);
@@ -149,10 +162,10 @@ double BackupAlphaPlaneMOMDP::getNewAlphaPlane(AlphaPlane& result, BeliefTreeNod
 
 		}
 		assert(maxActionLB !=  -DBL_MAX);
-		
+
 
 		getNewAlphaPlaneQ(result, cn, maxAction);
-	
+
 
 		DEBUG_TRACE(cout << "resulting alpha : " << endl);
 		DEBUG_TRACE(result.alpha->write(cout) << endl; );
@@ -172,7 +185,7 @@ void BackupAlphaPlaneMOMDP::getNewAlphaPlaneQ(AlphaPlane& result, const BeliefTr
 	bool defaultIsSet;
 	SharedPointer<BeliefWithState> dummy_stval (new BeliefWithState());
 
-	
+
 	state_val Xc = cn.s->sval;	// state value at current time step (ie X, not X')
 	SharedPointer<alpha_vector> defaultBetaAXnO;
 	const BeliefTreeQEntry& Qa = cn.Q[a];
@@ -186,7 +199,7 @@ void BackupAlphaPlaneMOMDP::getNewAlphaPlaneQ(AlphaPlane& result, const BeliefTr
 
 			const BeliefTreeObsState* QaXn = Qa.stateOutcomes[Xn];
 			if (NULL != QaXn )
-			{	
+			{
 				FOR (o, QaXn->getNumOutcomes())
 				{
 					if( !(problem->obsProb->getMatrix(a, Xn)->isColumnEmpty(o)))
@@ -207,18 +220,18 @@ void BackupAlphaPlaneMOMDP::getNewAlphaPlaneQ(AlphaPlane& result, const BeliefTr
 								defaultIsSet = true;
 							}
 							betaAXnO = defaultBetaAXnO;
-						}	
+						}
 						emult_column( tmp, *problem->obsProb->getMatrix(a, Xn), o, *betaAXnO );
 						mult( tmp1, *problem->YTrans->getMatrix(a, Xc, Xn), tmp);
 						emult_column( tmp2, *problem->XTrans->getMatrix(a, Xc), Xn, tmp1 );
 						(*betaA) += tmp2;
 					}
 				}
-			}  
-			else 
+			}
+			else
 			{
 				// still cycle through all possible observations and transform the vector and add to betaA
-				//FOR (o, problem->numObservations) 
+				//FOR (o, problem->numObservations)
 				for(Observations::iterator oIter = problem->observations->begin(); oIter != problem->observations->end(); oIter ++)
 				{
 					int o = oIter.index();
@@ -241,7 +254,7 @@ void BackupAlphaPlaneMOMDP::getNewAlphaPlaneQ(AlphaPlane& result, const BeliefTr
 
 				}
 				//}
-			} 
+			}
 		}
 	}
 	alpha_vector RaXc;

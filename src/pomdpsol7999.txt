@@ -1,0 +1,296 @@
+
+Loading the model ...
+  input file   : /media/martin/UUI/Backup mosquito file/Mosquito7.pomdpx
+InitialX is 255
+  loading time : 123.88s 
+
+SARSOP initializing...
+best action for state 0 : 0
+best action for state 1 : 2
+best action for state 2 : 6
+best action for state 3 : 5
+best action for state 4 : 14
+best action for state 5 : 10
+best action for state 6 : 13
+best action for state 7 : 12
+best action for state 8 : 27
+best action for state 9 : 2
+best action for state 10 : 29
+best action for state 11 : 5
+best action for state 12 : 30
+best action for state 13 : 10
+best action for state 14 : 13
+best action for state 15 : 12
+best action for state 16 : 46
+best action for state 17 : 33
+best action for state 18 : 48
+best action for state 19 : 5
+best action for state 20 : 49
+best action for state 21 : 10
+best action for state 22 : 39
+best action for state 23 : 12
+best action for state 24 : 45
+best action for state 25 : 33
+best action for state 26 : 29
+best action for state 27 : 5
+best action for state 28 : 49
+best action for state 29 : 10
+best action for state 30 : 39
+best action for state 31 : 12
+best action for state 32 : 72
+best action for state 33 : 53
+best action for state 34 : 56
+best action for state 35 : 55
+best action for state 36 : 60
+best action for state 37 : 58
+best action for state 38 : 59
+best action for state 39 : 12
+best action for state 40 : 65
+best action for state 41 : 53
+best action for state 42 : 56
+best action for state 43 : 55
+best action for state 44 : 60
+best action for state 45 : 58
+best action for state 46 : 59
+best action for state 47 : 12
+best action for state 48 : 71
+best action for state 49 : 53
+best action for state 50 : 68
+best action for state 51 : 55
+best action for state 52 : 69
+best action for state 53 : 58
+best action for state 54 : 59
+best action for state 55 : 12
+best action for state 56 : 65
+best action for state 57 : 53
+best action for state 58 : 68
+best action for state 59 : 55
+best action for state 60 : 69
+best action for state 61 : 58
+best action for state 62 : 59
+best action for state 63 : 12
+best action for state 64 : 106
+best action for state 65 : 80
+best action for state 66 : 83
+best action for state 67 : 5
+best action for state 68 : 109
+best action for state 69 : 10
+best action for state 70 : 13
+best action for state 71 : 12
+best action for state 72 : 92
+best action for state 73 : 80
+best action for state 74 : 29
+best action for state 75 : 5
+best action for state 76 : 30
+best action for state 77 : 10
+best action for state 78 : 86
+best action for state 79 : 12
+best action for state 80 : 98
+best action for state 81 : 33
+best action for state 82 : 48
+best action for state 83 : 5
+best action for state 84 : 49
+best action for state 85 : 10
+best action for state 86 : 39
+best action for state 87 : 12
+best action for state 88 : 45
+best action for state 89 : 33
+best action for state 90 : 29
+best action for state 91 : 5
+best action for state 92 : 49
+best action for state 93 : 10
+best action for state 94 : 39
+best action for state 95 : 12
+best action for state 96 : 112
+best action for state 97 : 53
+best action for state 98 : 56
+best action for state 99 : 55
+best action for state 100 : 102
+best action for state 101 : 58
+best action for state 102 : 59
+best action for state 103 : 12
+best action for state 104 : 65
+best action for state 105 : 53
+best action for state 106 : 56
+best action for state 107 : 55
+best action for state 108 : 102
+best action for state 109 : 58
+best action for state 110 : 59
+best action for state 111 : 12
+best action for state 112 : 71
+best action for state 113 : 53
+best action for state 114 : 68
+best action for state 115 : 55
+best action for state 116 : 69
+best action for state 117 : 58
+best action for state 118 : 59
+best action for state 119 : 12
+best action for state 120 : 65
+best action for state 121 : 53
+best action for state 122 : 68
+best action for state 123 : 55
+best action for state 124 : 69
+best action for state 125 : 58
+best action for state 126 : 59
+best action for state 127 : 12
+best action for state 128 : 0
+best action for state 129 : 2
+best action for state 130 : 6
+best action for state 131 : 5
+best action for state 132 : 14
+best action for state 133 : 10
+best action for state 134 : 13
+best action for state 135 : 12
+best action for state 136 : 27
+best action for state 137 : 19
+best action for state 138 : 29
+best action for state 139 : 21
+best action for state 140 : 30
+best action for state 141 : 24
+best action for state 142 : 25
+best action for state 143 : 12
+best action for state 144 : 46
+best action for state 145 : 33
+best action for state 146 : 48
+best action for state 147 : 35
+best action for state 148 : 49
+best action for state 149 : 38
+best action for state 150 : 39
+best action for state 151 : 12
+best action for state 152 : 45
+best action for state 153 : 42
+best action for state 154 : 43
+best action for state 155 : 35
+best action for state 156 : 44
+best action for state 157 : 38
+best action for state 158 : 39
+best action for state 159 : 12
+best action for state 160 : 72
+best action for state 161 : 53
+best action for state 162 : 56
+best action for state 163 : 55
+best action for state 164 : 60
+best action for state 165 : 58
+best action for state 166 : 59
+best action for state 167 : 12
+best action for state 168 : 65
+best action for state 169 : 62
+best action for state 170 : 63
+best action for state 171 : 55
+best action for state 172 : 64
+best action for state 173 : 58
+best action for state 174 : 59
+best action for state 175 : 12
+best action for state 176 : 71
+best action for state 177 : 67
+best action for state 178 : 68
+best action for state 179 : 55
+best action for state 180 : 69
+best action for state 181 : 58
+best action for state 182 : 59
+best action for state 183 : 12
+best action for state 184 : 70
+best action for state 185 : 67
+best action for state 186 : 68
+best action for state 187 : 55
+best action for state 188 : 69
+best action for state 189 : 58
+best action for state 190 : 59
+best action for state 191 : 12
+best action for state 192 : 106
+best action for state 193 : 80
+best action for state 194 : 83
+best action for state 195 : 5
+best action for state 196 : 109
+best action for state 197 : 10
+best action for state 198 : 86
+best action for state 199 : 12
+best action for state 200 : 92
+best action for state 201 : 19
+best action for state 202 : 90
+best action for state 203 : 21
+best action for state 204 : 91
+best action for state 205 : 24
+best action for state 206 : 25
+best action for state 207 : 12
+best action for state 208 : 98
+best action for state 209 : 33
+best action for state 210 : 95
+best action for state 211 : 35
+best action for state 212 : 96
+best action for state 213 : 38
+best action for state 214 : 39
+best action for state 215 : 12
+best action for state 216 : 97
+best action for state 217 : 42
+best action for state 218 : 43
+best action for state 219 : 35
+best action for state 220 : 44
+best action for state 221 : 38
+best action for state 222 : 39
+best action for state 223 : 12
+best action for state 224 : 112
+best action for state 225 : 53
+best action for state 226 : 101
+best action for state 227 : 55
+best action for state 228 : 102
+best action for state 229 : 58
+best action for state 230 : 59
+best action for state 231 : 12
+best action for state 232 : 103
+best action for state 233 : 62
+best action for state 234 : 63
+best action for state 235 : 55
+best action for state 236 : 64
+best action for state 237 : 58
+best action for state 238 : 59
+best action for state 239 : 12
+best action for state 240 : 104
+best action for state 241 : 67
+best action for state 242 : 68
+best action for state 243 : 55
+best action for state 244 : 69
+best action for state 245 : 58
+best action for state 246 : 59
+best action for state 247 : 12
+best action for state 248 : 70
+best action for state 249 : 67
+best action for state 250 : 68
+best action for state 251 : 55
+best action for state 252 : 69
+best action for state 253 : 58
+best action for state 254 : 59
+best action for state 255 : 12
+best action for state 256 : 112
+  initialization time : 299.81s
+ 299.81  0       0        28.3974    28.9329    0.535521    30583    1        
+
+-------------------------------------------------------------------------------
+ Time   |#Trial |#Backup |LBound    |UBound    |Precision  |#Alphas |#Beliefs  
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+SARSOP finishing ...
+  Preset timeout reached
+  Timeout     : 300.000000s
+  Actual Time : 300.040000s
+
+
+
+Model 0, proba: 0.166667
+Model 1, proba: 0.166667
+Model 2, proba: 0.166667
+Model 3, proba: 0.166667
+Model 4, proba: 0.166667
+Model 5, proba: 0.166667
+170.538   173.502
+
+-------------------------------------------------------------------------------
+ Time   |#Trial |#Backup |LBound    |UBound    |Precision  |#Alphas |#Beliefs  
+-------------------------------------------------------------------------------
+ 300.04  0       1        28.4231    28.9171    0.49399     1538     2        
+-------------------------------------------------------------------------------
+
+Writing out policy ...
+  output file : out.policy
+

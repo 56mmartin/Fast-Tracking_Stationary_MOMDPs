@@ -61,17 +61,17 @@ namespace momdp
 
 		FOR(xind, x.size())
 		{
-                    xval = x.data[xind];
-                    while (mycolIndex < cols.size() && cols[mycolIndex] < xind) mycolIndex++;
-                    if (mycolIndex == cols.size()) break;
-                    if (cols[mycolIndex] == xind) {
-			col_end = data.begin() + colEnd(mycolIndex);
-			for (Ai = data.begin() + cols_start[mycolIndex]; Ai != col_end; Ai++)
-			{
-				result(Ai->index) += xval * Ai->value;
-			}
-		    }
+            xval = x.data[xind];
+            while (mycolIndex < cols.size() && cols[mycolIndex] < xind) mycolIndex++;
+            if (mycolIndex == cols.size()) break;
+            if (cols[mycolIndex] == xind) {
+                col_end = data.begin() + colEnd(mycolIndex);
+                for (Ai = data.begin() + cols_start[mycolIndex]; Ai != col_end; Ai++)
+                {
+                    result(Ai->index) += xval * Ai->value;
                 }
+            }
+        }
 
 		return;
 	}
@@ -93,7 +93,7 @@ namespace momdp
 
                 int mycolIndex = 0;
 
-		FOREACH(SparseVector_Entry, xi,  x.data) 
+		FOREACH(SparseVector_Entry, xi,  x.data)
                 {
                     xind = xi->index;
                     xval = xi->value;
@@ -167,7 +167,7 @@ namespace momdp
 
 	void SparseMatrix::canonicalize(void)
 	{
-		//FOR (i, size2_) 
+		//FOR (i, size2_)
 		//{
 			//if (col_starts[i] > col_starts[i+1])
 			//{
@@ -178,7 +178,7 @@ namespace momdp
 
 	void SparseMatrix::read(std::istream& in)
 	{
-		// Need to be tested		
+		// Need to be tested
 		int rows, cols;
 		int num_entries;
 		int r, c;
@@ -188,7 +188,7 @@ namespace momdp
 		resize( rows, cols );
 
 		in >> num_entries;
-		FOR (i, num_entries) 
+		FOR (i, num_entries)
 		{
 			in >> r >> c >> value;
 			push_back( r, c, value );
@@ -214,7 +214,7 @@ namespace momdp
 	{
 		REAL_VALUE maxVal = data.begin()->value;
 		REAL_VALUE val;
-		FOREACH(SparseVector_Entry, entry,  data) 
+		FOREACH(SparseVector_Entry, entry,  data)
 		{
 			val = entry->value;
 			if(val>maxVal){
@@ -228,7 +228,7 @@ namespace momdp
             return cols;
         }
 
-	bool SparseMatrix::isColumnEmpty(int c) const 
+	bool SparseMatrix::isColumnEmpty(int c) const
 	{
 		return !binary_search(cols.begin(), cols.end(), c);
 	}

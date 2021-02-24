@@ -4,6 +4,7 @@
 #include "Bound.h"
 #include "Backup.h"
 #include "MOMDP.h"
+#include "AlphaPlanePoolSet.h"
 #include "BeliefValuePair.h"
 #include "BeliefValuePairPool.h"
 #include "PruneBeliefValuePair.h"
@@ -11,14 +12,14 @@
 #include <vector>
 using namespace std;
 using namespace momdp;
-namespace momdp 
+namespace momdp
 {
 
 
 	class BeliefValuePairPoolSet :	public Bound<BeliefValuePair>
 	{
 	private:
-		
+
 	public:
 		vector<BeliefValuePairPool*> set;
 		vector<BeliefCache *> beliefCacheSet;
@@ -42,6 +43,8 @@ namespace momdp
 		}
 
 		SharedPointer<MOMDP> problem;
+		AlphaPlanePoolSet *lbSet;
+
 		void setProblem(SharedPointer<MOMDP> p)
 		{
 			problem = p;
@@ -71,7 +74,7 @@ namespace momdp
 			}
 		}
 
-		SharedPointer<BeliefValuePair> addPoint(SharedPointer<BeliefWithState> beliefandState, double val) 
+		SharedPointer<BeliefValuePair> addPoint(SharedPointer<BeliefWithState> beliefandState, double val)
 		{
 			state_val sval = beliefandState->sval;
 			SharedPointer<belief_vector>  b = beliefandState->bvec;
@@ -113,5 +116,5 @@ namespace momdp
 
 }
 
-#endif 
+#endif
 

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pomdpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1" id="small" xsi:noNamespaceSchemaLocation="pomdpx.xsd">
+  <Discount>0.9</Discount>
+  <Variable>
+    <StateVar vnamePrev="ap" vnameCurr="nap" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="cp" vnameCurr="ncp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="sp" vnameCurr="nsp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="c_a" vnameCurr="nc_a" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="b_a" vnameCurr="nb_a" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="a_b" vnameCurr="na_b" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="b2" vnameCurr="nb2" fullyObs="false">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="c2" vnameCurr="nc2" fullyObs="false">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="_r1" vnameCurr="_nr1" fullyObs="false">
+      <ValueEnum>alt1 alt2</ValueEnum>
+    </StateVar>
+    <ActionVar vname="action">
+      <ValueEnum>adda surrender</ValueEnum>
+    </ActionVar>
+    <RewardVar vname="reward"/>
+  </Variable>
+  <InitialStateBelief>
+    <CondProb>
+      <Var>ap</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>cp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>sp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>c_a</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>b_a</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>a_b</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>b2</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>uniform</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>c2</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>uniform</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>_r1</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>0.9 0.1</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+  </InitialStateBelief>
+  <StateTransitionFunction>
+    <CondProb>
+      <Var>_nr1</Var>
+      <Parent>action</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* -</Instance>
+          <ProbTable>0.9 0.1</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nb2</Var>
+      <Parent>action b2</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nc2</Var>
+      <Parent>action c2</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nap</Var>
+      <Parent>action ap sp</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>adda * s0 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>na_b</Var>
+      <Parent>action a_b sp b2 c2 cp _r1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0-->
+          <Instance>adda - s0 * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1-->
+          <Instance>adda - s0 s1 s1 * alt1 -</Instance>
+          <ProbTable>1.0 0.0 1.0 0.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1-->
+          <Instance>adda - s0 s1 s1 * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1-->
+          <Instance>surrender - * s1 s1 s1 alt1 -</Instance>
+          <ProbTable>1.0 0.0 1.0 0.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nb_a</Var>
+      <Parent>action b_a sp b2 c2 cp _r1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0-->
+          <Instance>adda - s0 * * * * -</Instance>
+          <ProbTable>1.0 0.0 1.0 0.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1-->
+          <Instance>adda - s0 s1 s1 * alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1-->
+          <Instance>adda - s0 s1 s1 * alt2 -</Instance>
+          <ProbTable>1.0 0.0 1.0 0.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1-->
+          <Instance>surrender - * s1 s1 s1 alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nsp</Var>
+      <Parent>action sp cp</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>surrender * s1 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ncp</Var>
+      <Parent>action cp sp b2 c2 _r1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1-->
+          <Instance>adda - s0 s1 s1 alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1-->
+          <Instance>surrender s1 * s1 s1 alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nc_a</Var>
+      <Parent>action c_a sp b2 c2 cp _r1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1-->
+          <Instance>adda - s0 s1 s1 * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1-->
+          <Instance>surrender - * s1 s1 s1 alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+  </StateTransitionFunction>
+  <RewardFunction>
+    <Func>
+      <Var>reward</Var>
+      <Parent>nap nc_a</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* * </Instance>
+          <ValueTable>-1</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+      </Parameter>
+    </Func>
+  </RewardFunction>
+</pomdpx>

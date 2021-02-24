@@ -1,0 +1,3330 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pomdpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1" id="dvorak" xsi:noNamespaceSchemaLocation="pomdpx.xsd">
+  <Discount>0.9</Discount>
+  <Variable>
+    <StateVar vnamePrev="a1" vnameCurr="na1" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="e1" vnameCurr="ne1" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="g1" vnameCurr="ng1" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="c1" vnameCurr="nc1" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="h1" vnameCurr="nh1" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="ap" vnameCurr="nap" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="bp" vnameCurr="nbp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="cp" vnameCurr="ncp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="dp" vnameCurr="ndp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="ep" vnameCurr="nep" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="fp" vnameCurr="nfp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="gp" vnameCurr="ngp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="hp" vnameCurr="nhp" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="b_a" vnameCurr="nb_a" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="c_b" vnameCurr="nc_b" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="c_d" vnameCurr="nc_d" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="d_c" vnameCurr="nd_c" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="d_e" vnameCurr="nd_e" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="f_e" vnameCurr="nf_e" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="g_f" vnameCurr="ng_f" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="e_g" vnameCurr="ne_g" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="h_d" vnameCurr="nh_d" fullyObs="true">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="b2" vnameCurr="nb2" fullyObs="false">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="d2" vnameCurr="nd2" fullyObs="false">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="f2" vnameCurr="nf2" fullyObs="false">
+      <NumValues>2</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="_r3" vnameCurr="_nr3" fullyObs="false">
+      <ValueEnum>alt1 alt2</ValueEnum>
+    </StateVar>
+    <ActionVar vname="action">
+      <ValueEnum>adda adde addep addg addc addcp addh</ValueEnum>
+    </ActionVar>
+    <RewardVar vname="reward"/>
+  </Variable>
+  <InitialStateBelief>
+    <CondProb>
+      <Var>a1</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s1</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>e1</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s1</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>g1</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s1</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>c1</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s1</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>h1</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s1</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ap</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>bp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>cp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>dp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ep</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>fp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>gp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>hp</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>b_a</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>c_b</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>c_d</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>d_c</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>d_e</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>f_e</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>g_f</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>e_g</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>h_d</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>s0</Instance>
+          <ProbTable>1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>b2</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>uniform</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>d2</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>uniform</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>f2</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>uniform</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>_r3</Var>
+      <Parent>null</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>-</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+  </InitialStateBelief>
+  <StateTransitionFunction>
+    <CondProb>
+      <Var>_nr3</Var>
+      <Parent>action</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* -</Instance>
+          <ProbTable>0.5 0.5</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>na1</Var>
+      <Parent>action a1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ne1</Var>
+      <Parent>action e1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ng1</Var>
+      <Parent>action g1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nc1</Var>
+      <Parent>action c1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nh1</Var>
+      <Parent>action h1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nb2</Var>
+      <Parent>action b2</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nd2</Var>
+      <Parent>action d2</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nf2</Var>
+      <Parent>action f2</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nb_a</Var>
+      <Parent>action b_a</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nc_b</Var>
+      <Parent>action c_b</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nc_d</Var>
+      <Parent>action c_d</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nd_c</Var>
+      <Parent>action d_c</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nd_e</Var>
+      <Parent>action d_e</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nf_e</Var>
+      <Parent>action f_e</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ng_f</Var>
+      <Parent>action g_f</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ne_g</Var>
+      <Parent>action e_g</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nh_d</Var>
+      <Parent>action h_d</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nap</Var>
+      <Parent>action ap a1</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>adda * s1 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nep</Var>
+      <Parent>action ep e1 gp</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>adde * s1 * -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>addep * s1 s1 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ngp</Var>
+      <Parent>action gp g1 fp</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>addg * s1 s1 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ncp</Var>
+      <Parent>action cp c1 bp dp</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>addc * s1 s1 * -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>addcp * s1 * s1 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nhp</Var>
+      <Parent>action hp h1 dp</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <Instance>addh * s1 s1 -</Instance>
+          <ProbTable>0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nbp</Var>
+      <Parent>action bp a1 b2 ap d2 cp f2 ep e1 gp g1 fp c1 dp h1 _r3</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>adda - s1 s1 * * * * * * * * * * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adda - s1 s1 * s1 * s1 s1 * * * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adda - s1 s1 * s1 * s1 s1 * * * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>adda - s1 s1 * s1 s1 * * * * * * * * * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda - s1 s1 * s1 s1 s1 s1 * * * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda - s1 s1 * s1 s1 s1 s1 * * * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>adde - * s1 s1 * * * * s1 * * * * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adde - * s1 s1 s1 * s1 * s1 * * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adde - * s1 s1 s1 * s1 * s1 * * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>adde - * s1 s1 s1 s1 * * s1 * * * * * * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde - * s1 s1 s1 s1 s1 * s1 * * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde - * s1 s1 s1 s1 s1 * s1 * * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>addep - * s1 s1 * * * * s1 s1 * * * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addep - * s1 s1 s1 * s1 * s1 s1 * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addep - * s1 s1 s1 * s1 * s1 s1 * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addep - * s1 s1 s1 s1 * * s1 s1 * * * * * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addep - * s1 s1 s1 s1 s1 * s1 s1 * * * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addep - * s1 s1 s1 s1 s1 * s1 s1 * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>addg - * s1 s1 * * * * * * s1 s1 * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addg - * s1 s1 s1 * s1 s1 * * s1 s1 * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addg - * s1 s1 s1 * s1 s1 * * s1 s1 * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addg - * s1 s1 s1 s1 * * * * s1 s1 * * * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addg - * s1 s1 s1 s1 s1 s1 * * s1 s1 * * * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addg - * s1 s1 s1 s1 s1 s1 * * s1 s1 * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>addc s1 * s1 s1 * * * * * * * * s1 * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addc s1 * s1 s1 s1 * s1 s1 * * * * s1 * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addc s1 * s1 s1 s1 * s1 s1 * * * * s1 * * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addc s1 * s1 s1 s1 * * * * * * * s1 * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc s1 * s1 s1 s1 * s1 s1 * * * * s1 * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc s1 * s1 s1 s1 * s1 s1 * * * * s1 * * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>addcp - * s1 s1 * * * * * * * * s1 s1 * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addcp - * s1 s1 s1 * s1 s1 * * * * s1 s1 * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addcp - * s1 s1 s1 * s1 s1 * * * * s1 s1 * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addcp - * s1 s1 s1 * * * * * * * s1 s1 * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addcp - * s1 s1 s1 * s1 s1 * * * * s1 s1 * alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addcp - * s1 s1 s1 * s1 s1 * * * * s1 s1 * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=0-->
+          <Instance>addh - * s1 s1 * * * * * * * * * s1 s1 * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addh - * s1 s1 s1 * s1 s1 * * * * * s1 s1 alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addh - * s1 s1 s1 * s1 s1 * * * * * s1 s1 alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addh - * s1 s1 s1 s1 * * * * * * * s1 s1 * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addh - * s1 s1 s1 s1 s1 s1 * * * * * s1 s1 alt1 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addh - * s1 s1 s1 s1 s1 s1 * * * * * s1 s1 alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>ndp</Var>
+      <Parent>action dp a1 b2 ap d2 cp f2 ep e1 gp g1 fp c1 bp h1 _r3</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>adda - s1 * * s1 * s1 s1 * * * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>adda - s1 * * s1 s1 * * * * * * * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adda - s1 * * s1 s1 s1 s1 * * * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adda - s1 * * s1 s1 s1 s1 * * * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adda - s1 s1 * s1 * s1 s1 * * * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>adda - s1 s1 * s1 s1 * * * * * * * * * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda - s1 s1 * s1 s1 s1 s1 * * * * * * * alt1 -</Instance>
+          <ProbTable>0.3333333333333333 0.6666666666666666 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda - s1 s1 * s1 s1 s1 s1 * * * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>adde - * * * s1 * s1 * s1 * * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>adde - * * * s1 s1 * * s1 * * * * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adde - * * * s1 s1 s1 * s1 * * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adde - * * * s1 s1 s1 * s1 * * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adde - * s1 s1 s1 * s1 * s1 * * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>adde - * s1 s1 s1 s1 * * s1 * * * * * * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde - * s1 s1 s1 s1 s1 * s1 * * * * * * alt1 -</Instance>
+          <ProbTable>0.3333333333333333 0.6666666666666666 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde - * s1 s1 s1 s1 s1 * s1 * * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addep - * * * s1 * s1 * s1 s1 * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>addep - * * * s1 s1 * * s1 s1 * * * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addep - * * * s1 s1 s1 * s1 s1 * * * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addep - * * * s1 s1 s1 * s1 s1 * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addep - * s1 s1 s1 * s1 * s1 s1 * * * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addep - * s1 s1 s1 s1 * * s1 s1 * * * * * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addep - * s1 s1 s1 s1 s1 * s1 s1 * * * * * alt1 -</Instance>
+          <ProbTable>0.3333333333333333 0.6666666666666666 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addep - * s1 s1 s1 s1 s1 * s1 s1 * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addg - * * * s1 * s1 s1 * * s1 s1 * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>addg - * * * s1 s1 * * * * s1 s1 * * * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addg - * * * s1 s1 s1 s1 * * s1 s1 * * * alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addg - * * * s1 s1 s1 s1 * * s1 s1 * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addg - * s1 s1 s1 * s1 s1 * * s1 s1 * * * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addg - * s1 s1 s1 s1 * * * * s1 s1 * * * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addg - * s1 s1 s1 s1 s1 s1 * * s1 s1 * * * alt1 -</Instance>
+          <ProbTable>0.3333333333333333 0.6666666666666666 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addg - * s1 s1 s1 s1 s1 s1 * * s1 s1 * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addc - * * * s1 * s1 s1 * * * * s1 s1 * alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>addc - * * * s1 * * * * * * * s1 s1 * * -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addc - * * * s1 * s1 s1 * * * * s1 s1 * alt1 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addc - * * * s1 * s1 s1 * * * * s1 s1 * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addc - * s1 s1 s1 * s1 s1 * * * * s1 s1 * alt1 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addc - * s1 s1 s1 * * * * * * * s1 s1 * * -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc - * s1 s1 s1 * s1 s1 * * * * s1 s1 * alt1 -</Instance>
+          <ProbTable>0.3333333333333333 0.6666666666666666 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc - * s1 s1 s1 * s1 s1 * * * * s1 s1 * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addcp s1 * * * s1 * s1 s1 * * * * s1 * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>addcp s1 * * * s1 * * * * * * * s1 * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addcp s1 * * * s1 * s1 s1 * * * * s1 * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addcp s1 * * * s1 * s1 s1 * * * * s1 * * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addcp s1 * s1 s1 s1 * s1 s1 * * * * s1 * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addcp s1 * s1 s1 s1 * * * * * * * s1 * * * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addcp s1 * s1 s1 s1 * s1 s1 * * * * s1 * * alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addcp s1 * s1 s1 s1 * s1 s1 * * * * s1 * * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addh s1 * * * s1 * s1 s1 * * * * * * s1 alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=0-->
+          <Instance>addh s1 * * * s1 s1 * * * * * * * * s1 * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addh s1 * * * s1 s1 s1 s1 * * * * * * s1 alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addh s1 * * * s1 s1 s1 s1 * * * * * * s1 alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addh s1 * s1 s1 s1 * s1 s1 * * * * * * s1 alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=0-->
+          <Instance>addh s1 * s1 s1 s1 s1 * * * * * * * * s1 * -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addh s1 * s1 s1 s1 s1 s1 s1 * * * * * * s1 alt1 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addh s1 * s1 s1 s1 s1 s1 s1 * * * * * * s1 alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+    <CondProb>
+      <Var>nfp</Var>
+      <Parent>action fp a1 b2 ap d2 cp f2 ep e1 gp g1 c1 bp dp h1 _r3</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* - * * * * * * * * * * * * * * * -</Instance>
+          <ProbTable>identity</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>adda - s1 * * s1 * s1 s1 * * * * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adda - s1 * * s1 s1 s1 s1 * * * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adda - s1 s1 * s1 * s1 s1 * * * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adda - s1 s1 * s1 s1 s1 s1 * * * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>adde - * * * s1 * s1 * s1 * * * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>adde - * * * s1 s1 s1 * s1 * * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>adde - * s1 s1 s1 * s1 * s1 * * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>adde - * s1 s1 s1 s1 s1 * s1 * * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addep - * * * s1 * s1 * s1 s1 * * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addep - * * * s1 s1 s1 * s1 s1 * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addep - * s1 s1 s1 * s1 * s1 s1 * * * * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addep - * s1 s1 s1 s1 s1 * s1 s1 * * * * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addg s1 * * * s1 * s1 s1 * * s1 * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addg s1 * * * s1 s1 s1 s1 * * s1 * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addg s1 * s1 s1 s1 * s1 s1 * * s1 * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addg s1 * s1 s1 s1 s1 s1 s1 * * s1 * * * * alt2 -</Instance>
+          <ProbTable>0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addc - * * * s1 * s1 s1 * * * s1 s1 * * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addc - * * * s1 * s1 s1 * * * s1 s1 * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addc - * s1 s1 s1 * s1 s1 * * * s1 s1 * * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addc - * s1 s1 s1 * s1 s1 * * * s1 s1 * * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addcp - * * * s1 * s1 s1 * * * s1 * s1 * alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addcp - * * * s1 * s1 s1 * * * s1 * s1 * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addcp - * s1 s1 s1 * s1 s1 * * * s1 * s1 * alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addcp - * s1 s1 s1 * s1 s1 * * * s1 * s1 * alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=0 r3=1-->
+          <Instance>addh - * * * s1 * s1 s1 * * * * * s1 s1 alt2 -</Instance>
+          <ProbTable>0.0 1.0 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=0 r2=1 r3=1-->
+          <Instance>addh - * * * s1 s1 s1 s1 * * * * * s1 s1 alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=0 r3=1-->
+          <Instance>addh - * s1 s1 s1 * s1 s1 * * * * * s1 s1 alt2 -</Instance>
+          <ProbTable>0.5 0.5 0.0 1.0</ProbTable>
+        </Entry>
+        <Entry>
+          <!--r1=1 r2=1 r3=1-->
+          <Instance>addh - * s1 s1 s1 s1 s1 s1 * * * * * s1 s1 alt2 -</Instance>
+          <ProbTable>0.6666666666666666 0.3333333333333333 0.0 1.0</ProbTable>
+        </Entry>
+      </Parameter>
+    </CondProb>
+  </StateTransitionFunction>
+  <RewardFunction>
+    <Func>
+      <Var>reward</Var>
+      <Parent>nap nep nb_a nd_e nf_e nc_b nc_d nh_d ng_f nd_c ne_g</Parent>
+      <Parameter type="TBL">
+        <Entry>
+          <Instance>* * * * * * * * * * * </Instance>
+          <ValueTable>-1</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s0 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s0 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s0 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s0 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s0 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s0 s1 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s0 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s0 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s0 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s1 s0 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s1 s1 s0 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s0 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s1 s0 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s0 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s0 s1 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s1 s0 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s0 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s0 s1 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s0 s1 s1 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s0 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s0 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s0 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s0 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s0 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s0 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s0 s1 s1 s1 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s1 s1 s1 s0 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s1 s0 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s0 s1 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s1 s1 s0 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s0 s1 s1 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+        <Entry>
+          <Instance>s1 s1 s1 s1 s1 s1 s1 s1 s1 s1 s1 </Instance>
+          <ValueTable>10</ValueTable>
+        </Entry>
+      </Parameter>
+    </Func>
+  </RewardFunction>
+</pomdpx>

@@ -1,7 +1,7 @@
-/** 
+/**
 * Part of the this code is derived from ZMDP: http://www.cs.cmu.edu/~trey/zmdp/
 * ZMDP is released under Apache License 2.0
-* The rest of the code is released under GPL v2 
+* The rest of the code is released under GPL v2
 */
 
 
@@ -10,6 +10,8 @@
 
 #include "MathLib.h"
 #include "MOMDP.h"
+#include "AlphaPlanePool.h"
+//#include "AlphaPlanePoolSet.h"
 #include "FacmodelStructs.h"
 #include "BeliefValuePairPool.h"
 #include "BeliefValuePairPoolSet.h"
@@ -20,7 +22,7 @@
 
 namespace momdp {
 
-	struct FastInfUBInitializer 
+	struct FastInfUBInitializer
 	{
 		SharedPointer<MOMDP> pomdp;
 		BeliefValuePairPoolSet* bound;

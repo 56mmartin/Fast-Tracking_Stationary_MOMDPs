@@ -12,10 +12,11 @@ void BeliefTreeNode::print()
 {
 	cout << "BeliefTreeNode:" << endl;
 	cout << "CacheIndex row sval " << cacheIndex.row << " " << cacheIndex.sval << endl;
-	cout << "s beleif ";
-	s->bvec->write(cout) << endl;
+	cout << "s belief ";
+	s->bvec->write(cout) << endl;    // calls SparseVector::write(std::ostream& out)
 	cout << " sval " << s->sval << endl;
-	
+	//cout << " addresses " << &(s->sval) << " addresses " << &(cacheIndex.sval) << endl << endl;
+
 	for(vector<BeliefTreeQEntry>::iterator iter1 = Q.begin() ; iter1 != Q.end() ; iter1 ++)
 	{
 		BeliefTreeQEntry&  entry= *iter1;
