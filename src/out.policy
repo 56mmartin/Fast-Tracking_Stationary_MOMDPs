@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Policy version="0.1" type="value" model="Mosquito2.pomdpx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="policyx.xsd">
+<AlphaVector vectorLength="6" numObsValue="9" numVectors="9">
+<Vector action="0" obsValue="0">73.6686 24.0685 133.574 80.6596 26.6399 151.078 </Vector>
+<Vector action="2" obsValue="1">68.4278 21.0592 119.269 75.614 23.6682 138.292 </Vector>
+<Vector action="6" obsValue="2">70.4068 22.0316 121.339 77.6352 24.6481 140.796 </Vector>
+<Vector action="5" obsValue="3">67.7914 20.3879 110.726 75.1749 22.9634 130.174 </Vector>
+<Vector action="0" obsValue="4">73.671 24.069 133.575 80.6621 26.6405 151.08 </Vector>
+<Vector action="2" obsValue="5">68.3611 21.0523 119.035 75.5432 23.6603 138.023 </Vector>
+<Vector action="6" obsValue="6">70.4072 22.0318 121.328 77.636 24.6483 140.791 </Vector>
+<Vector action="5" obsValue="7">67.7951 20.3882 110.74 75.1787 22.9638 130.189 </Vector>
+<Vector action="7" obsValue="8">0 0 0 0 0 0 </Vector>
+</AlphaVector> </Policy>
