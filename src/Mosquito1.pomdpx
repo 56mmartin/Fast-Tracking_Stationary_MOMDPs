@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pomdpx version="1.0" id="mosquito"><Description>Mosquito project</Description>
+<Discount>0.9500000</Discount>
+<Variable>
+    <StateVar vnamePrev="island_0" vnameCurr="island_1" fullyObs="true">
+        <NumValues>5</NumValues>
+    </StateVar>
+    <StateVar vnamePrev="transition_0" vnameCurr="transition_1" fullyObs="false">
+        <NumValues>6</NumValues>
+    </StateVar>
+    <ObsVar vname="no_Obs">
+        <NumValues>1</NumValues>
+    </ObsVar>
+    <ActionVar vname="management">
+        <NumValues>3</NumValues>
+    </ActionVar>
+    <RewardVar vname="reward"/>
+</Variable>
+<InitialStateBelief>
+    <CondProb>
+    <Var>island_0</Var>
+    <Parent>null</Parent>
+    <Parameter type="TBL">
+        <Entry>
+            <Instance>-</Instance>
+            <ProbTable>0 0 0 1 0  </ProbTable>
+        </Entry>
+    </Parameter>
+    </CondProb>
+    <CondProb>
+    <Var>transition_0</Var>
+    <Parent>null</Parent>
+    <Parameter type="TBL">
+        <Entry>
+            <Instance>-</Instance>
+            <ProbTable>uniform</ProbTable>
+            <!--<ProbTable>0 0 1 0 0 0</ProbTable>-->
+        </Entry>
+    </Parameter>
+    </CondProb>
+</InitialStateBelief>
+<StateTransitionFunction>
+    <CondProb>
+    <Var>island_1</Var>
+    <Parent>management island_0 transition_0</Parent>
+    <Parameter type="TBL">
+        <Entry>
+            <Instance>a0 - s0 -</Instance>
+            <ProbTable>0 0 0.931478 0.068522 0 0 0 0.0358805 0.954199 0.0099204 0.931478 0.068522 0 0 0 0.0113463 0.978733 0 0 0.0099204 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a1 - s0 -</Instance>
+            <ProbTable>0 0 0 0 1 0 0 0.111092 0.878987 0.0099204 0 0 0 0 1 0.111092 0.878987 0 0 0.0099204 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a2 - s0 -</Instance>
+            <ProbTable>0 0 0 0 1 0 0 0.120152 0.869928 0.0099204 0 0 0 0 1 0.120152 0.869928 0 0 0.0099204 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a0 - s1 -</Instance>
+            <ProbTable>0 0 0.862956 0.137044 0 0 0 0.0351615 0.935077 0.0297612 0.862956 0.137044 0 0 0 0.0111189 0.95912 0 0 0.0297612 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a1 - s1 -</Instance>
+            <ProbTable>0 0 0 0 1 0 0 0.108866 0.861373 0.0297612 0 0 0 0 1 0.108866 0.861373 0 0 0.0297612 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a2 - s1 -</Instance>
+            <ProbTable>0 0 0 0 1 0 0 0.117744 0.852495 0.0297612 0 0 0 0 1 0.117744 0.852495 0 0 0.0297612 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a0 - s2 -</Instance>
+            <ProbTable>0 0 0.988 0.012 0 0 0 0.0358051 0.952195 0.012 0.988 0.012 0 0 0 0.0113225 0.976678 0 0 0.012 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a1 - s2 -</Instance>
+            <ProbTable>0 0 0 0 1 0 0 0.110859 0.877141 0.012 0 0 0 0 1 0.110859 0.877141 0 0 0.012 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a2 - s2 -</Instance>
+            <ProbTable>0 0 0 0 1 0 0 0.119899 0.868101 0.012 0 0 0 0 1 0.119899 0.868101 0 0 0.012 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a0 - s3 -</Instance>
+            <ProbTable>0 0 0.931478 0.068522 0 0 0 0.0358805 0.954199 0.0099204 0.931478 0.068522 0 0 0 0.0113463 0.978733 0 0 0.0099204 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a1 - s3 -</Instance>
+            <ProbTable>0 0 0 0 1 0 0 0.111092 0.878987 0.0099204 0 0 0 0 1 0.111092 0.878987 0 0 0.0099204 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a2 - s3 -</Instance>
+            <ProbTable>0 0 0 0 1 0 0 0.171645 0.818434 0.0099204 0 0 0 0 1 0.171645 0.818434 0 0 0.0099204 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a0 - s4 -</Instance>
+            <ProbTable>0 0 0.862956 0.137044 0 0 0 0.0351615 0.935077 0.0297612 0.862956 0.137044 0 0 0 0.0111189 0.95912 0 0 0.0297612 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a1 - s4 -</Instance>
+            <ProbTable>0 0 0 0 1 0 0 0.108866 0.861373 0.0297612 0 0 0 0 1 0.108866 0.861373 0 0 0.0297612 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a2 - s4 -</Instance>
+            <ProbTable>0 0 0 0 1 0 0 0.168206 0.802033 0.0297612 0 0 0 0 1 0.168206 0.802033 0 0 0.0297612 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a0 - s5 -</Instance>
+            <ProbTable>0 0 0.988 0.012 0 0 0 0.0358051 0.952195 0.012 0.988 0.012 0 0 0 0.0113225 0.976678 0 0 0.012 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a1 - s5 -</Instance>
+            <ProbTable>0 0 0 0 1 0 0 0.110859 0.877141 0.012 0 0 0 0 1 0.110859 0.877141 0 0 0.012 0 0 0 0 1 </ProbTable>
+        </Entry>
+        <Entry>
+            <Instance>a2 - s5 -</Instance>
+            <ProbTable>0 0 0 0 1 0 0 0.171285 0.816715 0.012 0 0 0 0 1 0.171285 0.816715 0 0 0.012 0 0 0 0 1 </ProbTable>
+        </Entry>
+    </Parameter>
+    </CondProb>
+    <CondProb>
+    <Var>transition_1</Var>
+    <Parent>transition_0</Parent>
+    <Parameter type="TBL">
+        <Entry>
+            <Instance>- -</Instance>
+            <ProbTable>identity</ProbTable>
+        </Entry>
+    </Parameter>
+    </CondProb>
+</StateTransitionFunction>
+<ObsFunction>
+    <CondProb>
+    <Var>no_Obs</Var>
+    <Parent>management island_1 transition_1</Parent>
+    <Parameter type="TBL">
+        <Entry>
+            <Instance>* * * o0</Instance>
+            <ProbTable>1</ProbTable>
+        </Entry>
+    </Parameter>
+    </CondProb>
+</ObsFunction>
+<RewardFunction>
+    <Func>
+    <Var>reward</Var>
+    <Parent>management island_0</Parent>
+    <Parameter type="TBL">
+        <Entry>
+            <Instance>- -</Instance>
+            <ValueTable>0.5 0.5 0.5 0.5 0 0 0.5 0 0.5 0 0 0.5 0 0.5 0 </ValueTable>
+        </Entry>
+    </Parameter>
+    </Func>
+</RewardFunction>
+</pomdpx>
